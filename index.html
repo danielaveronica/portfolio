@@ -4053,12 +4053,12 @@
   #view-santander{background:linear-gradient(180deg,#FFF1F1 0,#fff 520px)}
   #view-porto{background:linear-gradient(180deg,#ECF3FF 0,#fff 520px)}
   #view-personas{background:linear-gradient(180deg,#F2EFFC 0,#fff 520px)}
-  #view-sebrae{background:linear-gradient(180deg,#ECF7FC 0,#fff 520px)}
+  #view-sebrae{background:linear-gradient(180deg,#FFF3E8 0,#fff 520px)}
 
 
   /* photo glow (main color: lilac) */
   #view-home .about-graphic{position:relative}
-  #view-home .about-graphic::before{content:"";position:absolute;width:290px;height:290px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(205,185,255,.7) 0,rgba(205,185,255,.4) 40%,rgba(255,255,255,0) 100%);pointer-events:none}
+  #view-home .about-graphic::before{content:"";position:absolute;width:290px;height:290px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(205,185,255,.8) 0,rgba(205,185,255,.46) 40%,rgba(255,255,255,0) 100%);pointer-events:none}
   #view-home .about-graphic img{position:relative}
   #view-home .project-blocks .project-card:hover .card-cta{background:#E6DCFF;color:#1D1D1F;border-color:#D4C4FA}
 
@@ -4067,7 +4067,7 @@
   #view-home .project-block-image{position:relative;overflow:hidden;width:100%;height:auto}
   #view-home .project-block-image img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
   #view-home .project-card:hover .project-block-image img{transform:scale(1.05)}
-  .stat-pill{position:absolute;left:14px;bottom:14px;display:inline-flex;align-items:baseline;gap:7px;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.9);box-shadow:0 4px 14px rgba(70,60,120,.10);font-size:12.5px;color:#6E6E73;line-height:1.2;transition:transform .35s ease}
+  .stat-pill{position:absolute;left:14px;bottom:14px;display:inline-flex;align-items:baseline;gap:7px;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.9);box-shadow:0 4px 14px rgba(70,60,120,.10);font-size:12.5px;color:#3F3F46;line-height:1.2;transition:transform .35s ease,background-color .3s ease,border-color .3s ease}
   .stat-pill b{font-size:14px;color:#1D1D1F;font-weight:700;letter-spacing:-.01em}
   #view-home .project-card:hover .stat-pill{transform:translateY(-3px)}
   [data-i18n="about_p3"]::before,[data-i18n="work_eyebrow"]::before,[data-i18n="exp_eyebrow"]::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#E3D9FF;box-shadow:14px 0 #CDBDFF,28px 0 #AE96FF,42px 0 #7B5CE5;margin-right:56px;vertical-align:middle;position:relative;top:-1px}
@@ -4102,6 +4102,148 @@
   .case-track{position:absolute;bottom:-1px;height:4px;background:#E6E6EC;border-radius:4px;opacity:0;transition:opacity .25s ease;pointer-events:none;overflow:hidden}
   .case-track i{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,#9D86F2,#EA8FB2 60%,#F0B081);border-radius:4px}
   .case-nav.is-scrolled .case-track{opacity:1}
+
+  @media (min-width:681px) and (max-width:1200px){.case-nav .header-inner{padding-left:24px;padding-right:24px;box-sizing:border-box}}
+
+
+  /* ===== home header: solid + progress ===== */
+  #view-home > header{background:#FFFFFF!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border-bottom:1px solid #EDEDF1;transition:box-shadow .25s ease}
+  #view-home > header.is-scrolled{box-shadow:0 8px 24px rgba(20,20,40,.06)}
+  #view-home > header .case-track{bottom:-1px}
+  #view-home > header.is-scrolled .case-track{opacity:1}
+
+  /* stat pill: tinted on hover */
+  #view-home .project-blocks .project-card:nth-child(1):hover .stat-pill{border-color:#8FD3A5}
+  #view-home .project-blocks .project-card:nth-child(2):hover .stat-pill{border-color:#F2A3C2}
+  #view-home .project-blocks .project-card:nth-child(3):hover .stat-pill{border-color:#94B8F5}
+  #view-home .project-blocks .project-card:nth-child(4):hover .stat-pill{border-color:#BBA6F2}
+  #view-home .project-blocks .project-card:nth-child(5):hover .stat-pill{border-color:#F0B987}
+
+  /* ===== experience hover ===== */
+  @media (hover:hover){
+  #view-home .exp-row{position:relative;transition:background .25s ease,box-shadow .25s ease,border-color .25s ease}
+  #view-home .exp-row:hover{border-radius:14px;background:#fff;border-bottom-color:transparent;z-index:1;box-shadow:0 0 0 14px #fff,0 0 0 15px rgba(0,0,0,.07),0 16px 40px rgba(70,60,120,.14)}
+  }
+  .tool{transition:background-color .25s ease,border-color .25s ease,transform .25s ease;cursor:default}
+  .tool:hover{transform:translateY(-1px)}
+  .tools .tool:nth-child(5n+2):hover{background:#E1F5E7;border-color:#8FD3A5}
+  .tools .tool:nth-child(5n+3):hover{background:#FFE2EE;border-color:#F2A3C2}
+  .tools .tool:nth-child(5n+4):hover{background:#DFEAFF;border-color:#94B8F5}
+  .tools .tool:nth-child(5n+5):hover{background:#ECE5FF;border-color:#BBA6F2}
+  .tools .tool:nth-child(5n+6):hover{background:#FFEAD6;border-color:#F0B987}
+
+  [data-i18n="ov_info_timeline_value"],[data-i18n="personas_info_timeline_value"],[data-i18n="sebrae_info_timeline"]{white-space:pre-line}
+
+  /* ===== ONR Mapa: color at the start of the case (draft) ===== */
+  #view-onr-mapa .overview-info-grid-wrap{background:#F1F8F4}
+
+  /* ===== other cases: color at the start ===== */
+  #view-santander .overview-info-grid-wrap{background:#FCF2F6}
+  #view-porto .overview-info-grid-wrap{background:#F0F5FD}
+  #view-personas .overview-info-grid-wrap{background:#F5F1FD}
+  #view-sebrae .overview-info-grid-wrap{background:#FDF5EE}
+
+  /* ===== tables as white cards ===== */
+  .ptable-scroll,.dtable-wrap,.stable-scroll{background:#FFFFFF;border-radius:16px;box-shadow:0 0 0 1px rgba(0,0,0,.06)}
+  .ptable-label,.dtable-label,.stable-label{padding-left:24px!important;box-sizing:border-box}
+  .dtable-wrap{overflow:hidden}
+  .dtable-head:first-child{padding-left:24px!important;box-sizing:border-box}
+
+  .findings-table{box-shadow:0 0 0 1px rgba(0,0,0,.06);border-radius:16px;padding:24px 24px 28px!important;box-sizing:border-box}
+
+  /* tables: card elevation so white reads on white sections too */
+  .ptable-scroll,.dtable-wrap,.stable-scroll,.findings-table{box-shadow:0 0 0 1px rgba(0,0,0,.07),0 12px 32px rgba(70,70,110,.10)!important}
+
+  .stable-axis{padding-top:22px!important}
+
+  /* carousel buttons: clearer affordance */
+  .wireframe-carousel-btn{width:36px;height:36px;border:none;background:#1D1D1F;color:#fff;box-shadow:0 6px 16px rgba(20,20,40,.18);transition:background .2s ease,transform .2s ease,box-shadow .2s ease}
+  .wireframe-carousel-btn:hover{background:#3A3A3F;border-color:transparent;transform:translateY(-1px)}
+  .wireframe-carousel-btn:disabled,.wireframe-carousel-btn:disabled:hover{background:#E6E6EC;color:#9A9AA3;box-shadow:none;transform:none;opacity:1;border-color:transparent}
+  .wireframe-carousel-btn svg{width:16px;height:16px}
+  .wireframe-carousel-nav{gap:14px;margin-top:16px}
+
+  /* Personas Descobertas table: full width, aligned with the section title */
+  .dtable-wrap.dtable-wrap--5col{width:100%;margin-left:0}
+  .dtable-wrap--5col .dtable-label{font-weight:400}
+
+  /* Personas table: first column wide enough for long words */
+  .dtable-wrap--5col .dtable{grid-template-columns:184px repeat(3,minmax(0,1.1fr)) minmax(0,.85fr)}
+  .dtable-wrap--5col .dtable-label{padding-right:12px;overflow-wrap:break-word}
+
+  /* Personas dashboards: cards on white */
+  #view-personas .rd{--body:#2A2A2E;--muted:#4A4A50}
+  #view-personas .rd-content{background:#F5F5F7}
+  #view-personas .rd-ins,#view-personas .rd-tile,#view-personas .rd-nar,#view-personas .rd-fact,#view-personas .rd-icp>*,#view-personas .rd-stories>*,#view-personas .rd-prio>*,#view-personas .rd-steps>*,#view-personas .rd-rings>*{background:#FFFFFF!important;box-shadow:0 0 0 1px #E2E2E8,0 8px 24px rgba(70,70,110,.08)}
+  /* Personas: painel elevado */
+  #view-personas .rd-dash{box-shadow:0 0 0 1px rgba(0,0,0,.04),0 24px 60px rgba(70,60,120,.12)}
+  /* ONR Mapa: Resultado - como medimos, aprendizados */
+  #section-onr-resultado .rs-legend{margin:14px 4px 0;font-size:13px;line-height:1.5;color:#4A4A50}
+  #section-onr-resultado .rs-how{margin-top:56px}
+  @media(min-width:1001px){#section-onr-resultado .rs-legend,#section-onr-resultado .rs-how,#section-onr-resultado .rs-cols{margin-left:264px;max-width:860px}#section-onr-resultado .rs-legend{margin-left:268px}}
+  #section-onr-resultado .rs-how-title,#section-onr-resultado .rs-card-title{margin:0 0 10px;font-size:20px;font-weight:600;color:#1D1D1F;letter-spacing:-.01em}
+  #section-onr-resultado .rs-how-intro{margin:0 0 24px;font-size:16px;line-height:1.6;color:#2A2A2E;max-width:680px}
+  #section-onr-resultado .rs-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  #section-onr-resultado .rs-fact,#section-onr-resultado .rs-card{background:#fff;border-radius:16px;box-shadow:0 0 0 1px rgba(0,0,0,.07),0 12px 32px rgba(70,70,110,.10)}
+  #section-onr-resultado .rs-fact{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px}
+  #section-onr-resultado .rs-fact-l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#4A4A50}
+  #section-onr-resultado .rs-fact-v{font-size:15px;line-height:1.55;color:#2A2A2E}
+  #section-onr-resultado .rs-cols{margin-top:56px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+  #section-onr-resultado .rs-card{padding:32px 32px 28px}
+  #section-onr-resultado .rs-card-title{margin-bottom:18px}
+  #section-onr-resultado .rs-card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:18px}
+  #section-onr-resultado .rs-card li{position:relative;padding-left:20px;font-size:15px;line-height:1.6;color:#2A2A2E}
+  #section-onr-resultado .rs-card li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:#8FD3A5}
+  @media(max-width:760px){#section-onr-resultado .rs-cols{grid-template-columns:1fr}#section-onr-resultado .rs-card{padding:26px 22px}}
+  @media(max-width:560px){#section-onr-resultado .rs-facts{grid-template-columns:1fr}}
+  /* Resultado: modelo compartilhado (tiles, como medimos, aprendizados) */
+  .ov-section{--rs-acc:#8FD3A5}
+  #section-santander-resultado{--rs-acc:#F2A3C2}
+  #section-porto-resultado{--rs-acc:#94B8F5}
+  #section-personas-resultado{--rs-acc:#BBA6F2}
+  #section-sebrae-resultado{--rs-acc:#F0B987}
+  .rs-wide{margin-top:56px}
+  .rs-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:48px}
+  .rs-tile,.rs-fact,.rs-card,.rs-q{background:#fff;border-radius:16px;box-shadow:0 0 0 1px rgba(0,0,0,.07),0 12px 32px rgba(70,70,110,.10)}
+  .rs-tile{padding:26px 24px 26px;display:flex;flex-direction:column;gap:10px}
+  .rs-tile::before{content:"";width:28px;height:4px;border-radius:4px;background:var(--rs-acc);margin-bottom:6px}
+  .rs-tile-n{font-size:40px;line-height:1.05;font-weight:600;letter-spacing:-.02em;color:#1D1D1F}
+  .rs-tile-t{margin:0;font-size:15px;line-height:1.45;font-weight:600;color:#1D1D1F}
+  .rs-tile-b{margin:0;font-size:14px;line-height:1.6;color:#4A4A50}
+  .rs-ctx{margin-top:14px;margin-bottom:0;font-size:13px;line-height:1.5;color:#4A4A50}
+  .rs-how-title,.rs-card-title{margin:0 0 10px;font-size:20px;font-weight:600;color:#1D1D1F;letter-spacing:-.01em}
+  .rs-how-intro{margin:0 0 24px;font-size:16px;line-height:1.6;color:#2A2A2E;max-width:680px}
+  .rs-how-title:last-child{margin-bottom:0}
+  .rs-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .rs-fact{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px}
+  .rs-fact-l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#4A4A50}
+  .rs-fact-v{font-size:15px;line-height:1.55;color:#2A2A2E}
+  .rs-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+  .rs-cols--tight{gap:16px}
+  .rs-wide.rs-cols--after-title{margin-top:20px}
+  .rs-cols--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .rs-card{padding:32px 32px 28px}
+  .rs-card--text{padding:26px 28px 28px}
+  .rs-card-title{margin-bottom:12px;font-size:20px}
+  .rs-card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:18px}
+  .rs-card li{position:relative;padding-left:20px;font-size:15px;line-height:1.6;color:#2A2A2E}
+  .rs-card li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--rs-acc)}
+  .rs-card-p{margin:0;font-size:15px;line-height:1.6;color:#2A2A2E}
+  .rs-card-lead{margin:0 0 16px;font-size:15px;line-height:1.6;color:#4A4A50}
+  .rs-qstack{display:flex;flex-direction:column;gap:16px}
+  .rs-q{padding:24px 26px;display:flex;gap:14px;flex:1}
+  .rs-q-mark{font-size:44px;line-height:.8;color:var(--rs-acc);font-weight:600;flex:none}
+  .rs-q-t{margin:0 0 10px;font-size:15px;line-height:1.6;color:#2A2A2E}
+  .rs-q-s{margin:0;font-size:13px;color:#4A4A50}
+  .rs-note{margin-top:32px;padding:2px 0 2px 18px;border-left:3px solid var(--rs-acc);font-size:15px;line-height:1.6;color:#4A4A50;max-width:680px}
+  .rs-statement{margin-top:56px;font-size:20px;line-height:1.5;font-weight:500;color:#1D1D1F;max-width:680px;letter-spacing:-.005em}
+  @media(min-width:1001px){.rs-wide{margin-left:264px;max-width:860px}.rs-ctx{margin-left:268px}}
+  @media(max-width:1000px){.rs-cols--3{grid-template-columns:1fr}}
+  @media(max-width:760px){.rs-stats,.rs-cols{grid-template-columns:1fr}.rs-card{padding:26px 22px}.rs-tile-n{font-size:34px}}
+  @media(max-width:560px){.rs-facts{grid-template-columns:1fr}}
+  #section-porto-resultado .rs-bl{margin-bottom:28px}
+  #section-porto-resultado .rs-bl .rs-how-intro{margin-bottom:0}
+  #view-home .experience{scroll-margin-top:-30px}
 </style>
 </head>
 <body>
@@ -4113,6 +4255,7 @@
     <nav>
       <a href="javascript:void(0)" class="active js-scroll" data-target="home" role="link" tabindex="0" data-i18n="nav_home">Home</a>
       <a href="javascript:void(0)" class="js-scroll" data-target="work" role="link" tabindex="0" data-i18n="nav_work">UX Cases</a>
+      <a href="javascript:void(0)" class="js-scroll" data-target="experience" role="link" tabindex="0" data-i18n="nav_experience">Experience</a>
       <a href="https://www.linkedin.com/in/daniela-veronica" target="_blank" rel="noopener noreferrer" class="connect-link">
         <span data-i18n="nav_connect">Connect with me</span>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4189,7 +4332,7 @@
     <div class="project-card">
     <div class="project-block" id="onr-mapa-card" role="link" tabindex="0" style="cursor:pointer;">
       <div class="project-block-image">
-        <img src="data:image/webp;base64,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"><span class="stat-pill"><b>−37%</b><span data-i18n="stat_onr">registration doubts</span></span>
+        <img src="data:image/webp;base64,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"><span class="stat-pill"><b>−37%</b><span data-i18n="stat_onr">registration doubts</span></span>
       </div>
       <div class="project-block-info">
         <div class="tags">
@@ -4211,7 +4354,7 @@
     <div class="project-card">
     <div class="project-block" id="santander-card" role="link" tabindex="0" style="cursor:pointer;">
       <div class="project-block-image">
-        <img src="data:image/webp;base64,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"><span class="stat-pill"><b>−34%</b><span data-i18n="stat_san">time to access an API</span></span>
+        <img src="data:image/webp;base64,UklGRvQeAABXRUJQVlA4IOgeAACwGgGdASroA5sCPikUiUMhoSEQapQkGAKEtLd+CPFiYz8wZ7qtO+1KBDThrrFXTm/u498j3/L4x2rr9I4BvHTB0KvKj6Xsds2/qM8UXqXeYj9jvXf9MX/B9QD+ndSP6AHnN/+/2Z/8H5rXqAf//25ejn74elP17zseJNBvNWzt7I9rze8ie8oD88o88sw8h3/n3YEfeisaD3KcuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXK1rOg+FAyKRSKxYlAXDHSC/FVjQe5Tly5cuXLly5cO2GvTSg5guRTsLQcdllKa+x4kQBQmIDjWvxyTY6QX4qsaD3KcuXLly5cuXLlap3bfTEfk2Qdph9Z+wq3bZ1Xzxmrvf7xO3YRoQcnjr1mdniNekg9ynLly5cuXLly5cuVyjvOH1sQp/XHcIMBSULKQkP5dUoXG2WOW0UQ9MVfGGixPHs7h5Awj1jX7qczx4Wv+Wkg9ynLly5cuXLly5cMGrb+2g1c+Rz23WjkNLR/WMcktc5pCidnXwb2KR2IrrSnoZZ+qA5dNMHfGg9ynLly5cuXLly5crkbP54ek40VsEoBnEnLF3rsPN+xx4nKNacpBJqqElwnEEIjiqfRUXTfYx3JHDhPqlk2sjcafCon5dH3pIPcpy5cuXLly4YPLz9nAyjVNX2AKrrOJc28bdLNLo51gLGI3irWqvTMKUp39mDgaTh1GE3sCk7Q5povxVY0HuU5cuXLh2v7EBj/Za/7GaMRKv2ScD40V9wHOoGScmu3w714V1yg0JKEO4EUP/v5IYXCeK0HL8VAXDHSC/FVjQe5Tm0X4UUMTruXlq9MlHcbWaF+t05gViBwtcWPhMOlLYjvp+1EwjeTYDjOiBkeiBW9/z3iah7Di0K8gUJSnh03ETUsevslbfpF1pyH1g+edDb/v1Nd51MAdbgGpMkCjLiZdEowES+KrGg9ynLly5cuVthg6KYBHDAugU5YLxWMnKPFmHfe3tlWSRlJ7YCgNiEg9+uRfVjP56cvaw2lGBIt6MIfVUm/FVjQe5Tly5cri2RAlA8OTL05/BliervxVYgaPGkBTFsaQdaokqjy9QkzHSBGbt0KPop7PEKpFKX3ZTly5cuXLlytWMDJGdRhS9aDtRFuwogmXZUhJ/pkwoKn/qz7sVWNBvGkQlj1jJqC1IL8VWNB6jwZ64oVVYf3l/MASOWE9g6KIsgiKMfZUIWJFP0suKfuK2/e2ErLypyUVSmJr+MTeTKaw0N4Rt4tadPqmcqC2beUvrgd+CmqgtSC/FVjQfouBevLccvBky5Lq9HIo3FAIq3Kftf3ifIjZW6fL2PmH2F4sCAD7LpePwSUXgduWNAEiHcz3sC1yrobE2gIDPzmAswxXwiG/CdrsZRArCwlytmuDe7HRpkFnhjpBfiqxoPc1ifHADwZcm0QpvXBa/gVQwO1FW4IhubXXHPAYQBDfmGEZFGARuWJKKM0nsCozQj4nSRNJ+qWO3105ep4YfLDIPsW25tjCJSkL4PsDQI1GjUlGQ7DsoFqQX4qsaD3KeNDafPtACRSymX44duHaEW2zbM7c/y/d5uzMlRHxEd1jaxmlYcnMrbtt1zQbtUJUdZUChacp9fE26gTRG5BfiqxoPcpy77FO3eMSLQPTSl9ViBnVyM0uXLlYVwWju9VtDGoplvRWM/tJSTnVQYBfKaooox0gvxVY0HuU5/v2LYomNCOgUtTsD3KcI6MRtBbMTvMAEausQoMQpZnDHRtVzcWzb4uF75Aj00Fwx0gvxVY0Ht+JZZhRE4WsVslFdEunqDIKdUJ3mY0OrprDUUfSd//1ZxxmQSsQlLFvJS4TSBc2c6+r3OUHvepyj0+91OisHWl9/xvCCid3W7Mt0SgLhjpBfiqxoPePajM0glNZeREBECEJEhFxL2fVqRzQi7mvBZbWtyMYz6YBXsjOBNfyU3b1lftM20s+XlinWvUt0M6DB6+rNbaJzK/uBnfgM8BqYBJzW5ktJ6C3WD3KcuXLly5cuXLoHPt7Xsympq71ypWTbZJ7Etl+iWrSqWocUcTtFGcmGrg104nlXpIiiHPN9Wde3rf6N1s23scwtbsdeKf187bkKwKtcuXLly5cuXLly4YMNX2eEUYXoVni39BQfFrtF33g9Q2WzVbY3bThl9wG0NQN9f6rfQBnKpCgJegkxRlygeid4qca1Fb8IPcpy5cuXLly5cuVq/idTBSBMmu2f9WhASieqrATqIYKc/fyCNSqTYw3ouVezzahg9tk4BKGCgLhjpBfiqxoPcpy5crUMHnFyEY36LOMvoX8LCwWjec0Z/7BE//jHvtdfzUtbUwpY0HuU5cuXLly5cuXLlxDQDl2M0WAOqROVdDd6qiAqPBvrWx8lmGIoAcKKAJg7KnY9VjQe5Tly5cuXLly5cuXLhqKK6KRhcpxUhukrOz9qv3iqxoPcpy5cuXLly5cuXLly6yuLVfHHY+GwRktAmFI4sdY0HuU5cuXLly5cuXLly5cuXLly6y0mxB40a5V+8VWNB7lOXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLly5cuXLlysAAD+/2ZwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADj/yD30hzQjntpwva9L33q+ljQkhlLfrDmCVZjdzHVdGAAAFBYCND0YDtH0J2pRh5Nj5DU8jx2BWWNqbNCdvFE9pYkdtTtMQ5A3GcqSriFG+BuEoUbFlaTUcUc6RcU2rw4Epns+N8yIa3zYAgAAAG4yxPl+7Dl79n7tKciPUIL6/6EJuBKhmsbcu7Hj1WwY8U6sqcgueofXS+3MctSHbjr2FM6yF+gFhLsRnabpgUlgSDdqx9hpXsT88eZJQ3kgARYyfbMCRoyuDuvBfrU99yZzVv9AACngACcaTwX28lfiZ1ZFe6HcVfgTTj5ashT/aj4jYnONtwsgInO5T0CCkBjldKqYpyG2xzBIsA0DIJacdvkH9eWfuT73xjxabEr/fZv6RAlT1UNtDhfE/GvUWl+oBHXwT0PieE0eLrEaQ2Xht6nZZCQsgV5PUNTctkGs3ZB/zliAOR0ematfTHYAAjcNcJ6S+mNsWIN+n8ZJXIcVmYr8whwi2szyR4npGnYo8Ub0eqcsLNtOCkuWXyW0AjmHuNt9GHzuk2EwVBF0DczLxp6/M3G80WQdxkUPAGWdW2glhgP5tYkScYMkCpVI1U2uS9qPX3r6apclUCVemL/LqWHFzWZWEWPiERSZxjTGtAYc3MYS1MGpqSUCX3Q5/eiOMa6lgnKNkViUcbjtapAZeq0YGsknRsCGXosQyXmgAOQBXGrTY6ju3udLSYAihhsP4dWGkwAb7gLfgEforgwr1q3BvgTZzG0cNACJdKBdKAfoyNMe53yhindLFLaGFrhNO5+Z8NjJqPCaUM1rj5kDT4TZHQmHSkG7mBVsCg6fYn/Nx3WzF94p6IewdoJuCAEN7RagxGx7mixKkynnaQwmI0U1iSnMuj6jRmFO/oyi/BC/hEygTwPlAmxyP5Zz2C1t87wIgr417WrLOt1PUEKWJGgfZ6u5taxGPwx0x+3KCmHOEDW2EekCIPTUFCTGcw7pmDtofNUFP1c3l8E1mF8fsuCAJ7sLV7gtuDPLNl/Jz76XsfRn83BK1lvFih/ACZSAXful8+dCWf4J6QcWl4j+1aLLDhnaOraM7w1WV9jm3zLUemZ1RongR2B36LZnytMMlgwThZlL3LVAWXVS+7AOkGkrn8REUHPky8SAXJtq/51yHQS+J3dFREN5UNR3enDYneQEjs+GMDt1Dph9IXbX58BN+sd8bBtpeq//6E9i2mjaVWa40yQFNwAEFFKLBI1XcpNGedyqkQsKZuZ5RAxLci1kiboipXIZ63MlJ4KVrutvdhcx5jjqjZVSLpJkdMiclsDrMqFHiHDoCeaxex2skqn6T9RbwBLLj+AE6kJeNaCWm4KtLw2M+W4fNVnsHPqaLBvTL6u79/PXF0Mwt2gLaSrePfdAZUULsm6IwqS1tgFvWW3kbJC3pIaIlPC4hdZYK0dFPngt8aZ7KXXAZqZp0GMdhbxpratjo0Tm7epiXN0SCGEutungt+5Ke6aMKXYzFsIJu1sZZcRYZNOEztSIDFf3Kjjjns0d9fdzDGOPSBGBHvqpQG8jjGr5Tk5iFiBvI3KBoXBJEnDlEAYCsXfnERTLLkc97jFc4ENdQPTvIV9eUlubn+WJ7wQQ3GZczsAOitrJKre64tkgHWyA2o0BRXfwYdmFdXSHMrONWsJhFDRz3AqSMzrmsOT6TbD1h1zCwpJg6lgkQmFxl2KpDEOSkdCemzYMjvdTMY2Am4ObW7f222YQgxEwgoBu3V2Ksyl2y48RF8ttjdo7V5BWa1PV/rVM+whWT3Pcuei5Hpr/S2Zdz8OaNiiCZUz72hgjSIx82NTQuQAeizRZPYxMMJ3GCtrvd7nGz3SQW6w0Bu0ZBZgVQhYYJcFEhVCupoxLLitI7ysGoS6Gmkpvf7s/WT0U7Ivn+HbHAGiyR+yZDwRlNpKSwL6H0Kca2+0ouD4LjCGUBK7nhb9eREcL3+pEP44g3qzHM7E8u+kLpfeka2tB+FKYz8bj/dD8Zb0187QDhsaveIE4byPvl7oSPSdLov4a9tZwhMyedJkA9IpXDAd8n2gEzJ+S7sT1dbk3J8sL98NcdhZLXm4TzJavkzz0dPZcjO0rmziMDwG2AZmqP9y3tBpVpAJXTGCezTBrj2Gqt6ahMAAAA7h8KwftPa9bLsPCs5phfsRwV/OBrwta//a/+t1+v70EKbvuLIsfUwVn6ZJPGo2ZLLGw//9nb0eG8nkAH1Xl7SSJ554zBhZvi/a7QPQ7ZJnRfK/U23DajcPVCmci0hi46KKkjtYQSQmjgON04rFGLZHJs2tzHTgAACOJuA/T3GMRnlUyOFXJ5XrG9jr1NlaqYI49ppnFMWwC25vQlgqcoA+64lYSEeNov8Z/wfe4CGRzRHMYfO8F7IX/trjOh5NZNbV7LxN20BzCwhTYqgOtV4nMhcdh6vmUHjvfvNfAp6SgAfMlkCSqiauphnH6gjTgJd34M3v9MBrts+IQXprw+0U3LTiQ2VN0oHNlQ5q5B/cBW6Lc0W6wP3EJxwAEIOXNRzao/d/rM6HVHwFeC4xgiDpL+yNiC2E8xoy88gYTQm7jD3QbuhX+EYl7mVct3iPxrgQ13yp1Di7d3t8HFsbAGKd5AUiJoV8eM3lskNVXDvsefK2daSj43HUAngRIE8CuBX2uCwljpsr+9SO/xFel8ktwTDvPzzfkD8GQiPJznLuJGguU3vdWzf1q2KAAdxzRiCF0D3c0ae/hTIRXN0DqLGv5CuDZaeWe97GGo6l/HNjD2awBThhfrNM15CPmDLqtwPNp6nDBe5o4hah66I9Ccet84oUt+cFqr0DL0eejcGKGwirI6PSXf1jm2W08LXGk7jk3sgt9k3T8wE0PLgDPQGQov8TeWoyWxu4LLKjxD4/72nA3cA3tdZMcg+yWXMN6UQURb6d3pnGBnyXYiMwBO2i7+g8bQcYf7gPh5vdgMD7oK11pr/LB0dKf8Us6Oqld7z99TmWnDcSLM7+KizJCN01o6W49MJPq6ffHvmzT3zm6E3eGY9B5dWfwIK0IfmrWR2Vx6utAoCfx2RZh8JCh2CgyeoPKtbO7LjtKLNN3r4zSJeRdRzUx7uXn1V5ABCT9yCOP8mFD9/bEisBpLFQkT2zg115zWKI0wOvi8KZxXuHrfekzluVcMBgE5mFzziRViC5BBzEWOCmPPqUKKATntKyTDPW7iKao1Zuw6Cz/ce2r6iwvYWA7srF+bJt7ly0H3j9ybmgkQLcv8aG+yo9SnxvRFcK4d3La8/838IG5XPH1mfH+66lc/3VfIZnRFNuIYN6JzuHIs7uMr7DEgiQ5hok4LVrbdGnj8s9s0BetngW4jbjYaEmSf3A/xolURvv685mDk7bGr9/cKYfZF2XZjpvFcxV4HV7YsNohZSp3J9LbCiDmgjzfjqSsWOXfzyfI1/nu1ENrzcGdMK+ItZVVz+zFyJ70SAf4RDXVK6lPJeyLsdTBkUSpYqWJt3yOmloVMd5uWxz3sXLkS0yyaQpMY/ARKDGVlXBivnZB8kveLo4Ie51f8XGq0owQorIadWqrrNMVKwXHjdagNZmdgIpphxV1ydaV8xKn9W7pUTerYmEbCUkviZ3aN8fSmVrP863srr36xp/ECLxSaob1k5m/4mYSWVYgodpMg7pVXOfd6usozBjox/lpI49QkGlLSsLQXvi1ktuYGSKeNQfOvKGt3+W/4AQjLq8sf7FkrZaZAf+C0rdYD1Qq7Ascq8rnlUWnYxQwGdI3+pjG7+2faYRPhzn4qIBGm9HKxds0Wlnk+WoOnAQz1vBwDDQ7Y4+YU7bPLbhgWrQyeeDvtpyjvuhxQUbfgO722R3StiWFnQSKHmpISTrcALe5641dv9OvMlDBrzVCPswKMHxExfn6cXiumISfeDx/EE/cpe+ImKoVluUx/hqtv+nCfAwOSREvX9ORvIOuZeBmD6a59BzaDjj/aYxV6oc3DrwK8O3/P/sbYiEfRJIQ8TiwjHBHcog5TwilQyKfwzRJFZgFG/3gP9wHxAIQ30t9IRrVk+wi8+SogavLFg4C9K6tuvzvb2ydG2CvWGdjKuLW8/6b6cDrTB8kJ/ntL2qNs4Jd5qvnGBTDsu6SOl2VQb3hv3VJPmUq1o5TxPEHMZE/c1xpQRI9ajoTkFFGm2QRA5gfJtEkE8xScazagY2DM882C5UGYSJzMpqU0ZFvxFEY6UpFuLHdqZwgXrfP7HEkO5eHlUklrCGANeh0tseP2d+Gew+K9FspSIt/BfPve5+m8f+wuaMB5hDV284eErNiXa3qT62xArHc63XxgojW7FGTs042Qtd9M0MkVHwcMEEtbX8WU6Gll+XC36n+wv7smmvwBcbhXVg8eRd4D7bOLeeioXc22MKAp7VRImgWZfVKhDMnlgpji51xEUOrDNfnhwEPn39nld8+RQsBF7UpHLwveWLxgng0W0POHZQH8sxA6x2IUFAxkhbIMInOYzzgjAbP+TIaYlyuFx9ZkVA2Xo0Cs0Z0jrjszbSq3G4u/Ze0wyfsV4LU0GYEVzi4b86fT9TVHlrS987ysIo7f8bazGwRqEFvs7cSfbDAFrNEOAON1Phz4mgMUd8WlU9wcUIrGgOard2pVLUkK4g2uqrBOrFhrSE0040lYAAQZqq4O+V/NWwQM0/GSqxF4N4q+B4aTg5lkB80m5cAOGBuHvP+qcyvuQEfGvyYJVZw9+n38zBN4Ekz+2j/l3ADKOc5pGAXj5jiYfAYt3XSCvXpZjWIfF9IiCNAQ1z5NC/F7zPL/dSh4QDf54PSN14AAv0lPrTJFTdC4Q66TF1oBf/hDImfgwze6kpHmLaeW+69bAVys/EryHhMEsafY893D6r8efF6RX0WDAwllOXnRhr6vBVAx85kUYG7vLM+GIryF1Av1ocg8JEh0YLgkRwSSV6uIu1XLsJkCILQTxYGb2Pa/kkee/QDxO0TCEsQflrgNm+hC0oXgNIxCxvByw0kEteeMT4KiS6xmffQkXFThPwVmxREuSP4XZIjGkeoAhk+5Kg9ZMpY4nIcwt2PhdyajGKDptiDv0iTblCkZ4eWMZzJOyNd+paf6/ZsAnmGExQ069kFs309XKx3ZWMJeSV8khCe/pFul8T/vMAaznFozqAvUr9GPrRrMrM5uwg6SFJGNnkhB4q/fPb6XXg35YxbZdMNopG2Lxs0jEXIhd+9fRsKlzoNDsByuc8TqfvJzFWu+IVyP/XmafNFntzDQSwtloDX7KbeJxax6+kH1BcKmrXAbRnNHl2UyxqpNVs+CBvRLNFFfUHnB3Gbsd9Ogzwoa0Lh9zI8SOztbjGqPfV0faQVFH+rh1Q5jw3uA8H3O+Ms3V8981b9oNXK9kbicK2OZC3S2xsaLjrVYLGWyBwBRaZN7CZrh0hGDbPipBXIZDiioWeN9aAPou46dYv+31sRwRsfNdWqgxV+my+OfBCXSj8vy+ZjoGFCSziIBJ8r82SQLI+eiDx7mQYAEA08aXL5d4Ny4yiA/HGiYwuHccUownxxt/LtGQicpvnV9EapKLsTy0BTjts537xx5FrMcv/eosB3G2LX+naBaQTupKT4ZODYga/rYHjrz8Ype5X8orIibg5/1QRTCx5uPxM6l6k73ltre05iZxIpjSpTmEXO6JgX72ij4pD9qtceX9YKmy4Xu+ItF1pxWyb659o+TsmEIablDCeCBdKnTjrtUD7vYAf1X2hMIv+1KYq/mALzhDEI0sElhLyL6ebRCMqlouQeAKyw5hf86JR/ezvAr0l8SuTySp9oQdahlaxUGr+wO+tKAUMHGiAAUorEq/fYOQi/aMdm0IG1b9UN9zCSnv6rrqYkRJjmGWr8XZWhnANrNjfc0cPjYnvqlOYwH+mhOpyzhT5LeIBfSq6Q96haSZ1VaZc3egoV0IXpQMGOjvTKZv1SMgpZkpkdbCGUKHpptfoltIc8vNwHW8juUiNksKCJML8gejGxGi2ZmH8ghO4A0WGZgwXrOMjfCuYVx7mJHP+xv5pAoXH5o8t8nL0ljKahKplWTKQ4NJjIoMycL/Lv6wIkGFh63aJvC32fn+APeGcNjnaZu6ufPQ5pFkAGdVjSuAwcu2iHtcgwbEK7b4vyo0Q2za0naVrZAtzjBeoxKYSYQ611/vwLq8B/c1zV3uG955+jwDx5NnhLv0B1qT1fznyFM5GEvrGwsZe95vO+umqjNxb5oOeQpzuRXP0Ei/4c7gVuch1k/Ye11UKKudeuFU2vKM9h7VwpHEAAOzTiHRVxxEkR69s0A2HmxSPVzckRfZ2qKN1/HS9nAws0BOw6SLVGHtUNNaZNBPE/n6aLtZGVZJTWw2DjmPINj8t6GUipl7uf2Ei+Z3yE3dRMqugga06RUhK8ybLpRH0fqaKXLd/f5rbJr1+Tnnbbfy1Pt55bt+RncjW4eqxGj2+wWH9DrHU+11OTFgpmgbOWnYKyowUMcZJeuQDENH5TEdOxq4VzCJJPEvDhgjLZYkR71xiDlfGZ41nds2cdNhL0/Bo2Byjax2PiCxyt7DR9h8SERRwFxNmD5ZTiGoIuDiPh3Io94AACe4mNF53TS+t8ojzLReUtwdcInOL8Shr1yA/OZqh8O37DtfrhZhwMwZVxQ/q3h1dg4da8BS85pbgHvHiTW/LQy3S7FWjgS9qllaQRMGg4sDBAJZCWmm5JGCUGGJjmWefYHVz3PRMB6zrTeK6zsEeKoQOC/Ny8qU7nlk3skj3SbRVe8qLMpmo0oXN7wLDRIiAzMy4D1s9tFw37Xe5LI2Pe50394TTsLEjT9AYTvr+1+xB+pgZ+2c49oABF9C/5oAmpQy3CCg6lwIChFLwEzVHdpr7WHBiiyvq5ON2/kuVL1uJNg8ysw/gEtt8n93id8eRvnoWm8MvrtLNKz6x5++ZwBPMdsc7yekYZ15vixmDtK7REb/bEEMEPQvG0xoRBFdIqE8vO4RSbCaWxAi0OqElNLzQkLlduk8oFLsD1YN+aqf4Vdgw18Z2QHU7hsD/EH5EVgRWotZ4c4uAAAJmhWcAwjrudpzS4RufgMJjo3/gwA+wbWZmBPSVUAu5MlmVWsMldjfncQ9ZE/oMosVNBIIwEPhtORd7Y4vBLmCde/usKeXSm/7aZ0CHlivRQVHHmCCpJrb7m6+FhEkPlMr3VIjSrVykrpepEcXKQOj26zQq0KQ0gVN6Zmxy2KYlqiG/7uy/NCvM5vxjWS6JEmwPGjF3/G5aOAAAGsGmpkTqmSViBYIEsc1XJQ/bENx6k1udmrK4kbDGWKDpfymFOxyvmw+Ji3DOZ8PQjZqHH8J4DhPvrY+YYPJbFMYdTk4qTZQ4wpN1YAAAAEHEpy5lYw4aWa9ml+ioUwmJOcQURLCNi+C5WPIX52M+1rWRQhv/JPoWDP8LTKibAI1O47+xKQAAAAByDdwXe934dIHAFpGqlLYrL2oC3og787jQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"><span class="stat-pill"><b>−34%</b><span data-i18n="stat_san">time to access an API</span></span>
       </div>
       <div class="project-block-info">
         <div class="tags">
@@ -4303,7 +4446,7 @@
   </section>
 <section class="experience" id="experience"><div class="exp-inner">
 <div class="section-intro"><p class="eyebrow" data-i18n="exp_eyebrow">Experience</p><h2 class="section-headline" data-i18n="exp_headline">Career path:</h2></div>
-<div class="exp-list"><div class="exp-row"><div class="exp-date" data-i18n="exp0_date">Jun 2024 – Sep 2026</div><div class="exp-who"><div class="exp-co">ONR</div><div class="exp-role" data-i18n="exp0_role">Senior Product Designer</div></div><p class="exp-desc" data-i18n="exp0_desc">Modernization of B2B and B2C real estate registry systems. NPS +62 and 84% perceived ease of registration.</p></div>
+<div class="exp-list"><div class="exp-row"><div class="exp-date" data-i18n="exp0_date">Jun 2024 – Sep 2026</div><div class="exp-who"><div class="exp-co">ONR</div><div class="exp-role" data-i18n="exp0_role">Senior Product Designer</div></div><p class="exp-desc" data-i18n="exp0_desc">Modernization of B2B and B2C real estate registry systems: Map, SIPE (payments) and asset search. On the Map, NPS +62 and 84% perceived ease of registration.</p></div>
 <div class="exp-row"><div class="exp-date" data-i18n="exp1_date">Dec 2023 – Jun 2024</div><div class="exp-who"><div class="exp-co">Santander</div><div class="exp-role" data-i18n="exp1_role">Senior Product Designer</div></div><p class="exp-desc" data-i18n="exp1_desc">Discovery and design of the API Portal and Treasury area. 34% less time to reach key features.</p></div>
 <div class="exp-row"><div class="exp-date" data-i18n="exp2_date">Oct – Dec 2023</div><div class="exp-who"><div class="exp-co">Porto</div><div class="exp-role" data-i18n="exp2_role">Senior UX Researcher</div></div><p class="exp-desc" data-i18n="exp2_desc">SOS and Help discovery: benchmark of 15 solutions, 72 opportunities and a survey of about 500 users.</p></div>
 <div class="exp-row"><div class="exp-date" data-i18n="exp3_date">Sep 2022 – Sep 2023</div><div class="exp-who"><div class="exp-co">Sebrae</div><div class="exp-role" data-i18n="exp3_role">Lead Product Designer</div></div><p class="exp-desc" data-i18n="exp3_desc">Design System and Content System, and modernization of digital systems for entrepreneurs.</p></div>
@@ -4336,6 +4479,7 @@
       <a href="javascript:void(0)" class="js-view-challenge" data-i18n="case_nav_challenge">The challenge</a>
       <a href="javascript:void(0)" class="js-view-methodology" data-i18n="case_nav_methodology">Methodology</a>
       <a href="javascript:void(0)" class="js-view-validation" data-i18n="case_nav_validation">Validation</a>
+      <a href="javascript:void(0)" class="js-view-interface" data-i18n="case_nav_interface">Interface</a>
       <a href="javascript:void(0)" class="js-view-outcome" data-i18n="case_nav_outcome">Outcome</a>
       <a class="connect-link" href="https://www.linkedin.com/in/daniela-veronica" target="_blank" rel="noopener noreferrer">
         <span data-i18n="nav_connect">Connect with me</span>
@@ -4348,7 +4492,6 @@
 </g>
 </svg>
       </a>
-      <a href="javascript:void(0)" class="cv-link" data-i18n="nav_cv">Curr&iacute;culo</a>
       <span class="lang-switch" id="lang-switch-case" role="group" aria-label="Language">
         <a href="javascript:void(0)" class="lang-option active" data-lang="pt">PT</a>
         <span class="lang-sep">/</span>
@@ -4389,7 +4532,7 @@
       </div>
       <div>
         <p class="overview-info-label" data-i18n="ov_info_timeline_label">Timeline</p>
-        <p class="overview-info-value" data-i18n="ov_info_timeline_value">1.5 years</p>
+        <p class="overview-info-value" data-i18n="ov_info_timeline_value">1.5 years (of 2 years 4 months at ONR)</p>
       </div>
       <div>
         <p class="overview-info-label" data-i18n="ov_info_methods_label">Methods</p>
@@ -4650,7 +4793,7 @@
     </div>
     </div>
     </div>
-    <div class="ov-section ov-section--cream">
+    <div class="ov-section ov-section--cream" id="section-onr-interface">
     <div class="ov-section-inner">
     <div class="standard-block">
       <div class="standard-block-aside">
@@ -4715,8 +4858,6 @@
         <p class="standard-block-subtitle" data-i18n="mapa_resultado_subtitle">Impacto da solução</p>
       </div>
       <div class="standard-block-main">
-        <p class="standard-block-intro"><strong data-i18n="mapa_resultado_before_label">Antes do lançamento:</strong> <span data-i18n="mapa_resultado_before_text">analisamos as reclamações registradas pelo atendimento sobre o Mapa legado para identificar os principais pontos de dificuldade dos usuários. Esse levantamento aconteceu ao longo do ano de pesquisa, benchmark e design que antecedeu o primeiro MVP.</span></p>
-        <p class="standard-block-intro"><strong data-i18n="mapa_resultado_after_label">Após o lançamento:</strong> <span data-i18n="mapa_resultado_after_text">acompanhamos 47 analistas de cartório durante três meses, analisando a nova experiência por meio de dados de comportamento, NPS e feedbacks do atendimento. Desses, 35 responderam à pesquisa de NPS. A comparação com o período do Mapa legado permitiu avaliar se as principais dificuldades identificadas anteriormente haviam sido reduzidas.</span></p>
         <p class="standard-block-intro" data-i18n="mapa_resultado_body_p2">A simplificação dos fluxos, conteúdos e nomenclaturas reduziu a complexidade da experiência, tornando as principais tarefas do mapa mais claras e previsíveis.</p>
       </div>
     </div>
@@ -4753,6 +4894,30 @@
     </div>
     </div>
     </div>
+    <p class="rs-legend" data-i18n="mapa_res_legend">Resultados medidos em comparação com o Mapa legado.</p>
+
+    <div class="rs-how">
+      <p class="rs-how-title" data-i18n="mapa_how_title">Como medimos</p>
+      <p class="rs-how-intro" data-i18n="mapa_how_intro">Todos os resultados comparam o novo Mapa com o Mapa legado, que serviu de base de referência.</p>
+      <div class="rs-facts">
+        <div class="rs-fact"><span class="rs-fact-l" data-i18n="mapa_how_f1_l">Base de comparação</span><span class="rs-fact-v" data-i18n="mapa_how_f1_v">Reclamações do atendimento sobre o Mapa legado, levantadas ao longo do ano de pesquisa, benchmark e design antes do MVP</span></div>
+        <div class="rs-fact"><span class="rs-fact-l" data-i18n="mapa_how_f2_l">Acompanhamento</span><span class="rs-fact-v" data-i18n="mapa_how_f2_v">47 analistas de cartório acompanhados por 3 meses após o lançamento</span></div>
+        <div class="rs-fact"><span class="rs-fact-l" data-i18n="mapa_how_f3_l">Fontes</span><span class="rs-fact-v" data-i18n="mapa_how_f3_v">Dados de comportamento, NPS e feedbacks do atendimento</span></div>
+        <div class="rs-fact"><span class="rs-fact-l" data-i18n="mapa_how_f4_l">Amostra do NPS</span><span class="rs-fact-v" data-i18n="mapa_how_f4_v">35 respostas entre os 47 analistas</span></div>
+      </div>
+    </div>
+
+    <div class="rs-cols">
+      <div class="rs-card">
+        <p class="rs-card-title" data-i18n="mapa_learn_title">O que aprendi</p>
+        <ul><li data-i18n="mapa_learn_1">Juntar áreas diferentes na mesma conversa acelera a priorização. No workshop, diretoria, atendimento e cartórios discutiram o Mapa juntos pela primeira vez, e isso destravou um backlog de 8 oportunidades.</li><li data-i18n="mapa_learn_2">Em um produto regido por provimentos jurídicos, mudar um fluxo é também uma decisão jurídica. Envolver essa área cedo, como no cadastro em etapas, torna a mudança mais segura.</li><li data-i18n="mapa_learn_3">Mudar um padrão que o time já usa exige evidência. Benchmarks de ferramentas GIS e a validação com usuários sustentaram a troca do card central pelo painel lateral.</li></ul>
+      </div>
+      <div class="rs-card">
+        <p class="rs-card-title" data-i18n="mapa_diff_title">O que eu faria diferente</p>
+        <ul><li data-i18n="mapa_diff_1">Medir o Mapa legado com as mesmas perguntas de NPS e facilidade antes do lançamento. Hoje a base são as reclamações do atendimento, o que torna a comparação indireta.</li><li data-i18n="mapa_diff_2">Ampliar os testes de usabilidade. Validei com 6 profissionais; uma amostra maior, com mais perfis de cartório, daria mais segurança às decisões do MVP.</li><li data-i18n="mapa_diff_3">Levar mais cedo as funcionalidades adiadas, como desenho e medição, para teste com usuários, para que a próxima fase comece com evidência.</li></ul>
+      </div>
+    </div>
+
     </div>
     </div>
   </section>
@@ -4775,6 +4940,7 @@
       <a href="javascript:void(0)" class="active js-noop" data-i18n="case_nav_overview">Overview</a>
       <a href="javascript:void(0)" class="js-santander-view-challenge" data-i18n="case_nav_challenge">The challenge</a>
       <a href="javascript:void(0)" class="js-santander-view-methodology" data-i18n="case_nav_methodology">Methodology</a>
+      <a href="javascript:void(0)" class="js-santander-view-interface" data-i18n="case_nav_interface">Interface</a>
       <a href="javascript:void(0)" class="js-santander-view-outcome" data-i18n="case_nav_outcome">Outcome</a>
       <a class="connect-link" href="https://www.linkedin.com/in/daniela-veronica" target="_blank" rel="noopener noreferrer">
         <span data-i18n="nav_connect">Connect with me</span>
@@ -4787,7 +4953,6 @@
 </g>
 </svg>
       </a>
-      <a href="javascript:void(0)" class="cv-link" data-i18n="nav_cv">Curr&iacute;culo</a>
       <span class="lang-switch" id="lang-switch-santander" role="group" aria-label="Language">
         <a href="javascript:void(0)" class="lang-option active" data-lang="pt">PT</a>
         <span class="lang-sep">/</span>
@@ -5054,49 +5219,17 @@
         <p class="standard-block-subtitle" data-i18n="santander_result_subtitle">A product structure driven by research</p>
       </div>
       <div class="standard-block-main">
-        <p class="standard-block-intro" data-i18n="santander_result_body_p1">The research findings were presented to the stakeholders interviewed at the start of the project, connecting the needs identified to decisions about the portal&rsquo;s structure and evolution. The new navigation architecture and Master access management were incorporated into the roadmap, with Journey defined as the first evolution front, followed by Support and Content &amp; Marketing.</p>
-        <p class="standard-block-intro" data-i18n="santander_result_body_p2">Before I left the project, the Master area was already in development. To understand whether the new structure addressed the difficulties identified in the previous experience, I ran a comparative test and a comprehension check with four internal developers, outside the product team and with no prior knowledge of BaaS.</p>
-
-        <div class="content-divider--tight"></div>
-        <div class="standard-item">
-          <p class="standard-result-highlight" data-i18n="santander_result_validation_highlight">34% reduction in the time to locate and access an API</p>
-          <p class="tradeoff-line"><strong data-i18n="santander_result_howmeasured_label">How we measured it:</strong> <span data-i18n="santander_result_howmeasured_body">We compared the time needed to complete the same task in the previous experience and in the new structure. Participants needed to locate the correct company, identify an API, and reach the management area. Time was measured from the start of the task to reaching the final action.</span></p>
-          <p class="standard-item-body"><strong data-i18n="santander_result_validation_stat">4 participants &middot; 100% understood the flow &middot; no critical doubts</strong></p>
-
-          <div class="standard-item-quote-card">
-            <span class="standard-item-quote-mark" aria-hidden="true">&ldquo;</span>
-            <div class="standard-item-quote-body">
-              <p class="standard-item-quote" data-i18n="santander_result_quote1">In the previous version, it took me a while to understand which company I was in and where to find the APIs I needed. Here the hierarchy is much clearer.</p>
-              <p class="standard-item-quote-source" data-i18n="santander_result_quote1_source">Internal developer, technical profile</p>
-            </div>
-          </div>
-
-          <div class="standard-item-quote-card">
-            <span class="standard-item-quote-mark" aria-hidden="true">&ldquo;</span>
-            <div class="standard-item-quote-body">
-              <p class="standard-item-quote" data-i18n="santander_result_quote2">Now I can quickly identify the company context and which APIs are available. The flow is more direct than I remembered.</p>
-              <p class="standard-item-quote-source" data-i18n="santander_result_quote2_source">Internal developer, technical profile</p>
-            </div>
-          </div>
-
-          <p class="standard-item-title" data-i18n="santander_result_observed_title">What we observed</p>
-          <ul class="standard-list">
-            <li data-i18n="santander_result_observed_li1">Found the correct company without guidance</li>
-            <li data-i18n="santander_result_observed_li2">Identified the available APIs within the company context</li>
-            <li data-i18n="santander_result_observed_li3">Did not reproduce the main difficulties observed in the previous experience</li>
-          </ul>
-        </div>
-
-        <p class="standard-block-stat" data-i18n="santander_result_stat">8 profiles &middot; 24 interviews &middot; 3 fronts prioritized &middot; 34% less time to access</p>
-
-        <div class="content-divider--tight"></div>
-        <div class="standard-item">
-          <p class="standard-item-title" data-i18n="santander_result_learnings_title">What I would do differently</p>
-          <p class="standard-item-body" data-i18n="santander_result_learnings_body">If I'd had more time on the project, I would have brought forward testing of the main navigation hypotheses to confront the structure with users before development. The research gave a broad view of the ecosystem, but validating the critical flows while the solution was still being defined would have let me iterate on the architecture earlier and reduce uncertainties that only surfaced later, already in production.</p>
-          <p class="standard-item-closing" data-i18n="santander_result_closing">More than redesigning an interface, this project showed me the value of structuring complexity before turning it into a product.</p>
-        </div>
+        <p class="standard-block-intro" data-i18n="santander_result_body_p1">Os achados da pesquisa foram apresentados aos stakeholders entrevistados no início do projeto, conectando as necessidades identificadas às decisões de estrutura e evolução do portal. A nova arquitetura de navegação e gestão de acessos do Master foi incorporada ao roadmap, com a Jornada definida como primeira frente de evolução, seguida por Suporte e Conteúdo &amp; Marketing.</p>
+        <p class="standard-block-intro" data-i18n="santander_result_body_p2">Antes de sair do projeto, a área do Master já estava em desenvolvimento. A expectativa era que a nova estrutura reduzisse a necessidade de suporte em etapas recorrentes da jornada e facilitasse o avanço até a utilização das APIs. Como minha participação terminou antes do lançamento, esse impacto ficou como uma hipótese a ser acompanhada pelo produto após a implementação. Para entender se a nova estrutura já respondia às dificuldades identificadas na experiência anterior, conduzi um teste comparativo e uma checagem de compreensão com quatro desenvolvedores internos, fora da equipe do produto e sem conhecimento prévio do BaaS.</p>
       </div>
     </div>
+
+    <div class="rs-wide rs-stats rs-stats--3"><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="san_rs_t1_n">−34%</span></span><p class="rs-tile-t"><span data-i18n="san_rs_t1_c">no tempo para localizar e acessar uma API</span></p></div><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="san_rs_t2_n">4</span></span><p class="rs-tile-t"><span data-i18n="san_rs_t2_c">desenvolvedores internos no teste, fora da equipe do produto</span></p></div><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="san_rs_t3_n">100%</span></span><p class="rs-tile-t"><span data-i18n="san_rs_t3_c">compreenderam o fluxo, sem dúvidas críticas</span></p></div></div>
+    <p class="rs-wide rs-ctx"><span data-i18n="san_rs_ctx">Pesquisa de base: 8 perfis · 24 entrevistas · 3 frentes priorizadas</span></p>
+    <div class="rs-wide rs-how"><p class="rs-how-title" data-i18n="mapa_how_title">Como medimos</p><p class="rs-how-intro"><span data-i18n="san_rs_how_intro">Comparamos o tempo para realizar a mesma tarefa na experiência anterior e na nova estrutura.</span></p><div class="rs-facts"><div class="rs-fact"><span class="rs-fact-l" data-i18n="mapa_how_f1_l">Base de comparação</span><span class="rs-fact-v" data-i18n="san_rs_f1_v">Experiência anterior × nova estrutura, na mesma tarefa</span></div><div class="rs-fact"><span class="rs-fact-l" data-i18n="rs_f_task_l">Tarefa</span><span class="rs-fact-v" data-i18n="san_rs_f2_v">Localizar a empresa correta, identificar uma API e chegar à área de gerenciamento</span></div><div class="rs-fact"><span class="rs-fact-l" data-i18n="rs_f_metric_l">Métrica</span><span class="rs-fact-v" data-i18n="san_rs_f3_v">Tempo do início da tarefa até a ação final</span></div><div class="rs-fact"><span class="rs-fact-l" data-i18n="rs_f_part_l">Participantes</span><span class="rs-fact-v" data-i18n="san_rs_f4_v">4 desenvolvedores internos, fora da equipe do produto e sem conhecimento prévio do BaaS</span></div></div></div>
+    <div class="rs-wide rs-cols"><div class="rs-card"><p class="rs-card-title" data-i18n="santander_result_observed_title">O que observamos</p><ul><li><span data-i18n="santander_result_observed_li1">Encontraram a empresa correta sem orientação</span></li><li><span data-i18n="santander_result_observed_li2">Identificaram as APIs disponíveis dentro do contexto da empresa</span></li><li><span data-i18n="santander_result_observed_li3">Não reproduziram as principais dificuldades observadas na experiência anterior</span></li></ul></div><div class="rs-qstack"><div class="rs-q"><span class="rs-q-mark" aria-hidden="true">&ldquo;</span><div><p class="rs-q-t"><span data-i18n="santander_result_quote1">Na versão anterior, eu demorava para entender em qual empresa estava e onde encontrar as APIs que precisava. Aqui a hierarquia ficou bem mais clara.</span></p><p class="rs-q-s"><span data-i18n="santander_result_quote1_source">Desenvolvedor interno, perfil técnico</span></p></div></div><div class="rs-q"><span class="rs-q-mark" aria-hidden="true">&ldquo;</span><div><p class="rs-q-t"><span data-i18n="santander_result_quote2">Agora eu consigo identificar rapidamente o contexto da empresa e quais APIs estão disponíveis. O fluxo ficou mais direto do que eu lembrava.</span></p><p class="rs-q-s"><span data-i18n="santander_result_quote2_source">Desenvolvedor interno, perfil técnico</span></p></div></div></div></div>
+    <div class="rs-wide rs-cols"><div class="rs-card"><p class="rs-card-title" data-i18n="mapa_learn_title">O que aprendi</p><ul><li><span data-i18n="santander_result_closing">Mais do que redesenhar uma interface, o projeto me mostrou o valor de estruturar a complexidade antes de transformá-la em produto.</span></li><li><span data-i18n="san_rs_l2">Levar os achados da pesquisa aos stakeholders entrevistados no início conectou as necessidades identificadas às decisões de roadmap.</span></li></ul></div><div class="rs-card"><p class="rs-card-title" data-i18n="mapa_diff_title">O que eu faria diferente</p><ul><li><span data-i18n="san_rs_d1a">Se tivesse mais tempo no projeto, anteciparia os testes das principais hipóteses de navegação para confrontar a estrutura com usuários antes do desenvolvimento.</span></li><li><span data-i18n="san_rs_d1b">A pesquisa trouxe uma visão ampla do ecossistema, mas testar os fluxos críticos ainda durante a definição da solução permitiria iterar sobre a arquitetura com mais antecedência e reduzir incertezas que só apareceriam depois, já em produção.</span></li><li><span data-i18n="san_rs_d2">Combinar com o produto, antes de sair do projeto, como o impacto pós-lançamento seria acompanhado, já que ele ficou como hipótese.</span></li></ul></div></div>
+
     </div>
     </div>
   </section>
@@ -5131,7 +5264,6 @@
 </g>
 </svg>
       </a>
-      <a href="javascript:void(0)" class="cv-link" data-i18n="nav_cv">Curr&iacute;culo</a>
       <span class="lang-switch" id="lang-switch-sebrae" role="group" aria-label="Language">
         <a href="javascript:void(0)" class="lang-option active" data-lang="pt">PT</a>
         <span class="lang-sep">/</span>
@@ -5156,7 +5288,7 @@
 <div class="overview-info-grid-wrap"><div class="overview-info-grid">
 <div><p class="overview-info-label" data-i18n="porto_info_industry_label">Setor</p><p class="overview-info-value" data-i18n="sebrae_info_industry">Pequenos negócios · Sistemas internos</p></div>
 <div><p class="overview-info-label" data-i18n="porto_info_role_label">Minha função</p><p class="overview-info-value" data-i18n="sebrae_info_role">Lead Product Designer · UX, UI, arquitetura de componentes e Design System</p></div>
-<div><p class="overview-info-label" data-i18n="porto_info_timeline_label">Duração</p><p class="overview-info-value" data-i18n="sebrae_info_timeline">1 ano</p></div>
+<div><p class="overview-info-label" data-i18n="porto_info_timeline_label">Duração</p><p class="overview-info-value" data-i18n="sebrae_info_timeline">2 months (of 1 year at Sebrae)</p></div>
 <div><p class="overview-info-label" data-i18n="porto_info_methods_label">Métodos</p><p class="overview-info-value" data-i18n="sebrae_info_methods">Auditoria de interfaces · Fundamentos e tokens · Biblioteca de componentes</p></div>
 <div><p class="overview-info-label" data-i18n="porto_info_deliverables_label">Resultado</p><p class="overview-info-value" data-i18n="sebrae_info_result">50% menos tempo de criação · 40% menos no desenvolvimento · 4 squads</p></div>
 </div></div>
@@ -5320,26 +5452,15 @@
     <p class="standard-block-subtitle" data-i18n="sebrae_res_sub">De uma necessidade a uma base compartilhada</p>
   </div>
   <div class="standard-block-main">
-    <p class="standard-block-intro" data-i18n="sebrae_res_intro">Estruturei a biblioteca de componentes, os padrões visuais e as regras de uso desde o início, em parceria com o time de desenvolvimento, que implementou os componentes nos produtos.</p>
-    <div class="content-divider--tight"></div>
-    <p class="standard-item-title porto-resultado-lead-title" style="margin-top:24px" data-i18n="sebrae_res_lead">Resultados do Design System</p>
-    <ul class="standard-list">
-      <li><strong data-i18n="sebrae_li1_s">4 squads usando a mesma biblioteca:</strong><span data-i18n="sebrae_li1_p"> O trabalho começou na minha squad, com UX e cinco desenvolvedores entre front-end e back-end, e depois foi adotado por outras três squads, cada uma formada por UX, desenvolvedores, Tech Lead e Product Owner.</span></li>
-      <li><strong data-i18n="sebrae_li2_s">50% menos tempo na criação das interfaces:</strong><span data-i18n="sebrae_li2_p"> Com os componentes já estruturados, os times deixaram de reconstruir elementos recorrentes ou criar novas soluções para cada funcionalidade.</span></li>
-      <li><strong data-i18n="sebrae_li3_s">Cerca de 40% menos tempo no desenvolvimento:</strong><span data-i18n="sebrae_li3_p"> Os componentes já implementados puderam ser reutilizados nos produtos, evitando que a interface precisasse ser desenvolvida novamente a cada demanda.</span></li>
-      <li><strong data-i18n="sebrae_li4_s">Mais consistência entre os sistemas:</strong><span data-i18n="sebrae_li4_p"> Uma mesma linguagem visual e estrutural reduziu diferenças desnecessárias entre produtos e fluxos.</span></li>
-      <li><strong data-i18n="sebrae_li5_s">Evolução compartilhada:</strong><span data-i18n="sebrae_li5_p"> Quando um componente precisava ser atualizado, a melhoria era incorporada à biblioteca e podia ser usada pelas demais squads. Com isso, os designers também puderam dedicar mais tempo à experiência e à estrutura dos fluxos.</span></li>
-    </ul>
-    <p class="standard-block-intro" style="margin-top:20px" data-i18n="sebrae_res_jira">Os ganhos de tempo foram medidos a partir do acompanhamento das entregas de design e desenvolvimento no Jira, comparando o esforço antes e depois da adoção da biblioteca.</p>
-
-    <div class="content-divider--tight"></div>
-    <div class="standard-item">
-      <p class="standard-item-title" data-i18n="sebrae_today_t">O que eu faria hoje</p>
-      <p class="standard-item-body" data-i18n="sebrae_today_b">O sistema foi criado em 2022 e reflete as decisões e possibilidades daquele momento. Hoje, faria alguns ajustes: definiria o line-height do texto corrido em torno de 1,5, incluiria um estado de foco visível em todos os elementos interativos e organizaria as cores por função (como texto, borda e superfície) em vez de apenas por nome de cor.</p>
-      <p class="standard-item-closing" data-i18n="sebrae_closing">Mais do que uma biblioteca de componentes, o Design System se tornou uma base compartilhada para a evolução dos produtos internos do Sebrae.</p>
-    </div>
-  </div>
+        <p class="standard-block-intro" data-i18n="sebrae_res_intro">Estruturei a biblioteca de componentes, os padrões visuais e as regras de uso desde o início, em parceria com o time de desenvolvimento, que implementou os componentes nos produtos.</p>
+      </div>
 </div>
+
+    <div class="rs-wide rs-stats rs-stats--3"><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="seb_rs_n1">4</span></span><p class="rs-tile-t"><span data-i18n="seb_rs_t1">squads usando a mesma biblioteca</span></p><p class="rs-tile-b"><span data-i18n="sebrae_li1_p"> O trabalho começou na minha squad, com UX e cinco desenvolvedores entre front-end e back-end, e depois foi adotado por outras três squads, cada uma formada por UX, desenvolvedores, Tech Lead e Product Owner.</span></p></div><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="seb_rs_n2">50%</span></span><p class="rs-tile-t"><span data-i18n="seb_rs_t2">menos tempo na criação das interfaces</span></p><p class="rs-tile-b"><span data-i18n="sebrae_li2_p"> Com os componentes já estruturados, os times deixaram de reconstruir elementos recorrentes ou criar novas soluções para cada funcionalidade.</span></p></div><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="seb_rs_n3">~40%</span></span><p class="rs-tile-t"><span data-i18n="seb_rs_t3">menos tempo no desenvolvimento</span></p><p class="rs-tile-b"><span data-i18n="sebrae_li3_p"> Os componentes já implementados puderam ser reutilizados nos produtos, evitando que a interface precisasse ser desenvolvida novamente a cada demanda.</span></p></div></div>
+    <div class="rs-wide rs-cols"><div class="rs-card rs-card--text"><p class="rs-card-title" data-i18n="seb_rs_c1_t">Mais consistência entre os sistemas</p><p class="rs-card-p" data-i18n="sebrae_li4_p"> Uma mesma linguagem visual e estrutural reduziu diferenças desnecessárias entre produtos e fluxos.</p></div><div class="rs-card rs-card--text"><p class="rs-card-title" data-i18n="seb_rs_c2_t">Evolução compartilhada</p><p class="rs-card-p" data-i18n="sebrae_li5_p"> Quando um componente precisava ser atualizado, a melhoria era incorporada à biblioteca e podia ser usada pelas demais squads. Com isso, os designers também puderam dedicar mais tempo à experiência e à estrutura dos fluxos.</p></div></div>
+    <div class="rs-wide rs-how"><p class="rs-how-title" data-i18n="mapa_how_title">Como medimos</p><p class="rs-how-intro"><span data-i18n="seb_rs_how_intro">Os dois ganhos de tempo foram medidos a partir do acompanhamento das entregas no Jira.</span></p><div class="rs-facts"><div class="rs-fact"><span class="rs-fact-l" data-i18n="seb_rs_f1_l">Fonte</span><span class="rs-fact-v" data-i18n="seb_rs_f1_v">Jira: entregas de design e desenvolvimento</span></div><div class="rs-fact"><span class="rs-fact-l" data-i18n="mapa_how_f1_l">Base de comparação</span><span class="rs-fact-v" data-i18n="seb_rs_f2_v">Esforço antes e depois da adoção da biblioteca</span></div></div></div>
+    <div class="rs-wide rs-cols"><div class="rs-card"><p class="rs-card-title" data-i18n="mapa_learn_title">O que aprendi</p><ul><li><span data-i18n="sebrae_closing">Mais do que uma biblioteca de componentes, o Design System se tornou uma base compartilhada para a evolução dos produtos internos do Sebrae.</span></li><li><span data-i18n="seb_rs_l2">Com componentes estruturados, os designers passam a dedicar mais tempo à experiência e à estrutura dos fluxos, e menos à reconstrução de elementos.</span></li></ul></div><div class="rs-card"><p class="rs-card-title" data-i18n="sebrae_today_t">O que eu faria hoje</p><p class="rs-card-lead"><span data-i18n="seb_rs_today_lead">O sistema foi criado em 2022 e reflete as decisões e possibilidades daquele momento. Hoje, faria alguns ajustes:</span></p><ul><li><span data-i18n="seb_rs_d1">Definir o line-height do texto corrido em torno de 1,5.</span></li><li><span data-i18n="seb_rs_d2">Incluir um estado de foco visível em todos os elementos interativos.</span></li><li><span data-i18n="seb_rs_d3">Organizar as cores por função (como texto, borda e superfície) em vez de apenas por nome de cor.</span></li></ul></div></div>
+
 </div>
 </div>
 </section>
@@ -5372,7 +5493,6 @@
 </g>
 </svg>
       </a>
-      <a href="javascript:void(0)" class="cv-link" data-i18n="nav_cv">Curr&iacute;culo</a>
       <span class="lang-switch" id="lang-switch-porto" role="group" aria-label="Language">
         <a href="javascript:void(0)" class="lang-option active" data-lang="pt">PT</a>
         <span class="lang-sep">/</span>
@@ -5589,30 +5709,18 @@
         <p class="standard-block-subtitle" data-i18n="porto_resultado_subtitle">Uma nova dire&ccedil;&atilde;o para o SOS</p>
       </div>
       <div class="standard-block-main">
-        <p class="standard-block-intro" data-i18n="porto_resultado_intro1">Ajudei a estruturar uma nova vis&atilde;o para a &aacute;rea de SOS, conectando benchmark, idea&ccedil;&atilde;o e pesquisa para transformar refer&ecirc;ncias em oportunidades concretas de produto. Este case documenta a etapa de discovery e estrat&eacute;gia do projeto, que estruturou as hip&oacute;teses, oportunidades e prioridades que serviram de base para a etapa seguinte de defini&ccedil;&atilde;o das solu&ccedil;&otilde;es.</p>
-        <div class="content-divider--tight"></div>
-        <p class="standard-item-title porto-resultado-lead-title" data-i18n="porto_resultado_lead">Resultados do discovery</p>
-        <ul class="standard-list">
-          <li><strong data-i18n="porto_resultado_li1_label">15 solu&ccedil;&otilde;es analisadas:</strong><span data-i18n="porto_resultado_li1_body"> Benchmark nacional e internacional organizado em dois eixos: Preven&ccedil;&atilde;o e Situa&ccedil;&atilde;o, permitindo comparar diferentes formas de apoiar o usu&aacute;rio antes, durante e depois de uma situa&ccedil;&atilde;o cr&iacute;tica.</span></li>
-          <li><strong data-i18n="porto_resultado_li2_label">72 ideias geradas no workshop:</strong><span data-i18n="porto_resultado_li2_body"> A idea&ccedil;&atilde;o com o time da Porto gerou 72 solu&ccedil;&otilde;es. 55% estavam relacionadas a situa&ccedil;&otilde;es j&aacute; em andamento, enquanto 28% estavam voltadas &agrave; preven&ccedil;&atilde;o e 17% a outras dores.</span></li>
-          <li><strong data-i18n="porto_resultado_li3_label">Suporte e resolu&ccedil;&atilde;o ganharam espa&ccedil;o:</strong><span data-i18n="porto_resultado_li3_body"> Entre as ideias relacionadas a situa&ccedil;&otilde;es, 49% estavam concentradas em suporte e 43% em resolu&ccedil;&atilde;o, refor&ccedil;ando a oportunidade de ampliar o papel do SOS para al&eacute;m do acionamento inicial.</span></li>
-          <li><strong data-i18n="porto_resultado_li4_label">Backlog priorizado:</strong><span data-i18n="porto_resultado_li4_body"> As oportunidades foram organizadas a partir das prioridades definidas no workshop, criando uma base para orientar os pr&oacute;ximos ciclos de desenvolvimento.</span></li>
-          <li><strong data-i18n="porto_resultado_li5_label">Pesquisa quantitativa com cerca de 500 usu&aacute;rios:</strong><span data-i18n="porto_resultado_li5_body"> As hip&oacute;teses priorizadas foram levadas para uma pesquisa quantitativa, planejada para validar as necessidades identificadas antes da defini&ccedil;&atilde;o das solu&ccedil;&otilde;es.</span></li>
-        </ul>
-        <p class="standard-block-intro" data-i18n="porto_resultado_closing">Atuei no projeto at&eacute; a leitura dos resultados da pesquisa quantitativa. A consolida&ccedil;&atilde;o final das oportunidades ficou para a etapa seguinte do projeto.</p>
-
-        <div class="content-divider--tight"></div>
-        <div class="standard-item">
-          <p class="standard-item-title" data-i18n="porto_resultado_learnings_title">O que eu aprendi</p>
-          <p class="standard-item-body" data-i18n="porto_resultado_learnings_body">Esse projeto refor&ccedil;ou para mim que benchmark s&oacute; ganha valor quando ajuda a transformar refer&ecirc;ncias em decis&otilde;es. Mais do que mapear solu&ccedil;&otilde;es interessantes, foi preciso criar uma estrutura para comparar contextos, identificar padr&otilde;es e levar esses aprendizados para uma discuss&atilde;o concreta de produto. O workshop foi importante justamente por fazer essa ponte entre pesquisa, neg&oacute;cio e prioriza&ccedil;&atilde;o.</p>
-        </div>
-        <div class="standard-item">
-          <p class="standard-item-title" data-i18n="porto_resultado_differently_title">O que eu faria diferente</p>
-          <p class="standard-item-body" data-i18n="porto_resultado_differently_body">Hoje, eu buscaria envolver ainda mais cedo os crit&eacute;rios de prioriza&ccedil;&atilde;o e sucesso da pesquisa quantitativa, deixando mais expl&iacute;cito desde o in&iacute;cio como cada hip&oacute;tese seria avaliada. Isso ajudaria a conectar o benchmark, a idea&ccedil;&atilde;o e a valida&ccedil;&atilde;o em uma linha ainda mais direta at&eacute; a decis&atilde;o de produto.</p>
-          <p class="standard-item-closing" data-i18n="porto_resultado_final_quote">Mais do que ampliar as possibilidades para o SOS, o projeto me mostrou como um bom discovery pode transformar refer&ecirc;ncias dispersas em uma dire&ccedil;&atilde;o de produto mais clara, conectando pesquisa, idea&ccedil;&atilde;o e prioriza&ccedil;&atilde;o.</p>
-        </div>
+        <p class="standard-block-intro" data-i18n="porto_resultado_intro1">Ajudei a estruturar uma nova visão para a área de SOS, conectando benchmark, ideação e pesquisa para transformar referências em oportunidades concretas de produto. Este case documenta a etapa de discovery e estratégia do projeto, que estruturou as hipóteses, oportunidades e prioridades que serviram de base para a etapa seguinte de definição das soluções.</p>
       </div>
     </div>
+
+    <div class="rs-wide rs-stats rs-stats--3"><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="porto_rs_n1">15</span></span><p class="rs-tile-t"><span data-i18n="porto_rs_t1_t">soluções analisadas</span></p><p class="rs-tile-b"><span data-i18n="porto_resultado_li1_body"> Benchmark nacional e internacional organizado em dois eixos: Prevenção e Situação, permitindo comparar diferentes formas de apoiar o usuário antes, durante e depois de uma situação crítica.</span></p></div><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="porto_rs_n2">72</span></span><p class="rs-tile-t"><span data-i18n="porto_rs_t2_t">ideias geradas no workshop</span></p><p class="rs-tile-b"><span data-i18n="porto_resultado_li2_body"> A ideação com o time da Porto gerou 72 soluções. 55% estavam relacionadas a situações já em andamento, enquanto 28% estavam voltadas à prevenção e 17% a outras dores.</span></p></div><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="porto_rs_n3">~500</span></span><p class="rs-tile-t"><span data-i18n="porto_rs_t3_t">usuários na pesquisa quantitativa</span></p><p class="rs-tile-b"><span data-i18n="porto_resultado_li5_body"> As hipóteses priorizadas foram levadas para uma pesquisa quantitativa, planejada para validar as necessidades identificadas antes da definição das soluções.</span></p></div></div>
+    <div class="rs-wide rs-cols"><div class="rs-card rs-card--text"><p class="rs-card-title" data-i18n="porto_rs_c1_t">Suporte e resolução ganharam espaço</p><p class="rs-card-p" data-i18n="porto_resultado_li3_body"> Entre as ideias relacionadas a situações, 49% estavam concentradas em suporte e 43% em resolução, reforçando a oportunidade de ampliar o papel do SOS para além do acionamento inicial.</p></div><div class="rs-card rs-card--text"><p class="rs-card-title" data-i18n="porto_rs_c2_t">Backlog priorizado</p><p class="rs-card-p" data-i18n="porto_resultado_li4_body"> As oportunidades foram organizadas a partir das prioridades definidas no workshop, criando uma base para orientar os próximos ciclos de desenvolvimento.</p></div></div>
+    <p class="rs-wide rs-note"><span data-i18n="porto_resultado_closing">Atuei no projeto até a leitura dos resultados da pesquisa quantitativa. A consolidação final das oportunidades ficou para a etapa seguinte do projeto.</span></p>
+    <div class="rs-wide rs-cols"><div class="rs-card"><p class="rs-card-title" data-i18n="mapa_learn_title">O que aprendi</p><ul><li><span data-i18n="porto_rs_l1">Benchmark só ganha valor quando ajuda a transformar referências em decisões.</span></li><li><span data-i18n="porto_rs_l2">Mais do que mapear soluções interessantes, foi preciso criar uma estrutura para comparar contextos, identificar padrões e levar esses aprendizados para uma discussão concreta de produto.</span></li><li><span data-i18n="porto_rs_l3">O workshop foi importante justamente por fazer essa ponte entre pesquisa, negócio e priorização.</span></li></ul></div><div class="rs-card"><p class="rs-card-title" data-i18n="mapa_diff_title">O que eu faria diferente</p><ul><li><span data-i18n="porto_rs_d1">Envolver ainda mais cedo os critérios de priorização e sucesso da pesquisa quantitativa, deixando explícito desde o início como cada hipótese seria avaliada.</span></li><li><span data-i18n="porto_rs_d2">Conectar benchmark, ideação e validação em uma linha ainda mais direta até a decisão de produto.</span></li></ul></div></div>
+    <p class="rs-wide rs-statement"><span data-i18n="porto_resultado_final_quote">Mais do que ampliar as possibilidades para o SOS, o projeto me mostrou como um bom discovery pode transformar referências dispersas em uma direção de produto mais clara, conectando pesquisa, ideação e priorização.</span></p>
+
+
+    <div class="rs-wide rs-how rs-bl"><p class="rs-how-title" data-i18n="porto_bl_title">Backlog de oportunidades</p><p class="rs-how-intro" data-i18n="porto_bl_legend">Oportunidades priorizadas no workshop com o time da Porto, organizadas em dois eixos: Prevenção, com ações de educação, alerta e contenção; e Situação, com ações de instrução, suporte e resolução. Cada oportunidade mostra o território relacionado, o impacto percebido pelo time e sua prioridade.</p></div>
 
     <div class="porto-backlog-wrap">
     <section class="sos-backlog" aria-label="Backlog de oportunidades priorizadas no workshop">
@@ -5741,7 +5849,6 @@
 </g>
 </svg>
       </a>
-      <a href="javascript:void(0)" class="cv-link" data-i18n="nav_cv">Curr&iacute;culo</a>
       <span class="lang-switch" id="lang-switch-personas" role="group" aria-label="Language">
         <a href="javascript:void(0)" class="lang-option active" data-lang="pt">PT</a>
         <span class="lang-sep">/</span>
@@ -5782,7 +5889,7 @@
       </div>
       <div>
         <p class="overview-info-label" data-i18n="personas_info_timeline_label">Dura&ccedil;&atilde;o</p>
-        <p class="overview-info-value" data-i18n="personas_info_timeline_value">1 ano</p>
+        <p class="overview-info-value" data-i18n="personas_info_timeline_value">1 year, alongside other projects</p>
       </div>
       <div>
         <p class="overview-info-label" data-i18n="personas_info_methods_label">M&eacute;todos</p>
@@ -5941,7 +6048,7 @@
       <div class="dtable-cell" data-i18n="personas_disc_r4_c4">48% acham os custos pouco ou nada claros, 18% t&#234;m falha de pagamento ou cr&#233;dito</div>
       <div class="dtable-cell" data-i18n="personas_disc_r4_c5">Fluxo de pagamento</div>
 
-      <div class="dtable-cell dtable-label" data-i18n="personas_disc_r5_c1">Acompanhamento e comprovantes</div>
+      <div class="dtable-cell dtable-label" data-i18n="personas_disc_r5_c1">Atualizações e comprovantes</div>
       <div class="dtable-cell" data-i18n="personas_disc_r5_c2">69% sentem falta de recibo, 59% recebem nota superficial, ausente ou s&#243; o n&#250;mero do protocolo</div>
       <div class="dtable-cell" data-i18n="personas_disc_r5_c3">78% acham as notifica&#231;&#245;es insuficientes, 73% querem identificar o cliente no protocolo, 93% querem a prenota&#231;&#227;o na lista</div>
       <div class="dtable-cell" data-i18n="personas_disc_r5_c4">33% n&#227;o recebem notifica&#231;&#227;o, 30% acham as atualiza&#231;&#245;es pouco detalhadas</div>
@@ -6002,24 +6109,15 @@
         <p class="standard-block-subtitle" data-i18n="personas_res_subtitle">Personas como base de decis&#245;es de produto</p>
       </div>
       <div class="standard-block-main">
-        <div class="standard-item">
-          <p class="standard-block-intro" data-i18n="personas_res_intro">As personas deixaram de ser apenas material de apresenta&#231;&#227;o e passaram a orientar o que o RI Digital prioriza. Dos dez perfis mapeados, aprofundei tr&#234;s e entreguei, para cada um, ICP, user stories, narrativas e decis&#245;es de produto, al&#233;m de um backlog organizado pelas necessidades identificadas e de uma ordem de prioridade: Corretor, Advogado e Usu&#225;rio Comum.</p>
-          <p class="standard-block-intro rd-lines">
-            <span data-i18n="personas_res_l1">Decis&#245;es de produto: conectadas a cada perfil e &#224; ordem de desenvolvimento.</span>
-            <span data-i18n="personas_res_l2">ICPs e narrativas: descrevem o contexto, as dores e a forma de comunicar o produto para cada perfil.</span>
-            <span data-i18n="personas_res_l3">Crit&#233;rio de prioriza&#231;&#227;o: indica por onde come&#231;ar, em vez de tratar todos os perfis da mesma forma.</span>
-          </p>
-        </div>
-        <div class="standard-item">
-          <h3 class="standard-item-title" data-i18n="personas_res_l_title">O que eu aprendi</h3>
-          <p class="standard-item-body" data-i18n="personas_res_l_body">Persona s&#243; gera valor quando vira crit&#233;rio de decis&#227;o. As entrevistas deram profundidade, a pesquisa quantitativa deu escala para escolher entre hip&#243;teses, e a compara&#231;&#227;o entre os tr&#234;s perfis mostrou onde as necessidades se repetem e onde pedem solu&#231;&#245;es diferentes. Passei a tratar a pesquisa como insumo de prioriza&#231;&#227;o, e n&#227;o s&#243; de descoberta.</p>
-        </div>
-        <div class="standard-item">
-          <h3 class="standard-item-title" data-i18n="personas_res_d_title">O que eu faria diferente</h3>
-          <p class="standard-item-body" data-i18n="personas_res_d_body">Definiria desde o in&#237;cio, junto com o time de neg&#243;cio, como cada hip&#243;tese seria considerada confirmada, parcial ou refutada, e qual decis&#227;o de produto cada resultado destravaria. Isso reduziria a dist&#226;ncia entre a pesquisa e a decis&#227;o. Tamb&#233;m levaria m&#233;tricas de acompanhamento para o backlog desde o primeiro ciclo, para medir o efeito de cada decis&#227;o depois de entregue.</p>
-        </div>
+        <p class="standard-block-intro" data-i18n="personas_res_intro">As personas deixaram de ser apenas material de apresentação e passaram a orientar o que o RI Digital prioriza. Dos dez perfis mapeados, aprofundei três e entreguei, para cada um, ICP, user stories, narrativas e decisões de produto, além de um backlog organizado pelas necessidades identificadas e de uma ordem de prioridade: Corretor, Advogado e Usuário Comum.</p>
       </div>
     </div>
+
+    <div class="rs-wide rs-stats rs-stats--3"><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="prs_rs_n1">10</span></span><p class="rs-tile-t"><span data-i18n="prs_rs_t1">perfis mapeados</span></p></div><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="prs_rs_n2">3</span></span><p class="rs-tile-t"><span data-i18n="prs_rs_t2">perfis aprofundados</span></p></div><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="prs_rs_n3">74</span></span><p class="rs-tile-t"><span data-i18n="prs_011">respondentes na pesquisa</span></p></div></div>
+    <div class="rs-wide rs-how"><p class="rs-how-title" data-i18n="prs_rs_deliv">O que entreguei</p></div>
+    <div class="rs-wide rs-cols rs-cols--3 rs-cols--tight rs-cols--after-title"><div class="rs-card rs-card--text"><p class="rs-card-title" data-i18n="prs_rs_c1_t">Decisões de produto</p><p class="rs-card-p" data-i18n="prs_rs_c1_b">Conectadas a cada perfil e à ordem de desenvolvimento.</p></div><div class="rs-card rs-card--text"><p class="rs-card-title" data-i18n="prs_rs_c2_t">ICPs e narrativas</p><p class="rs-card-p" data-i18n="prs_rs_c2_b">Descrevem o contexto, as dores e a forma de comunicar o produto para cada perfil.</p></div><div class="rs-card rs-card--text"><p class="rs-card-title" data-i18n="prs_rs_c3_t">Critério de priorização</p><p class="rs-card-p" data-i18n="prs_rs_c3_b">Indica por onde começar, em vez de tratar todos os perfis da mesma forma.</p></div></div>
+    <div class="rs-wide rs-cols"><div class="rs-card"><p class="rs-card-title" data-i18n="mapa_learn_title">O que aprendi</p><ul><li><span data-i18n="prs_rs_l1">Persona só gera valor quando vira critério de decisão.</span></li><li><span data-i18n="prs_rs_l2">As entrevistas deram profundidade, a pesquisa quantitativa deu escala para escolher entre hipóteses, e a comparação entre os três perfis mostrou onde as necessidades se repetem e onde pedem soluções diferentes.</span></li><li><span data-i18n="prs_rs_l3">Passei a tratar a pesquisa como insumo de priorização, e não só de descoberta.</span></li></ul></div><div class="rs-card"><p class="rs-card-title" data-i18n="mapa_diff_title">O que eu faria diferente</p><ul><li><span data-i18n="prs_rs_d1">Definir desde o início, junto com o time de negócio, como cada hipótese seria considerada confirmada, parcial ou refutada, e qual decisão de produto cada resultado destravaria. Isso reduziria a distância entre a pesquisa e a decisão.</span></li><li><span data-i18n="prs_rs_d2">Levar métricas de acompanhamento para o backlog desde o primeiro ciclo, para medir o efeito de cada decisão depois de entregue.</span></li></ul></div></div>
+
 
     <div class="rd" id="personas-rd">
       <div class="rd-picker" role="tablist" aria-label="Perfis">
@@ -6286,7 +6384,8 @@
     var targets = {
       home: document.getElementById('home'),
       work: document.getElementById('work'),
-      about: document.getElementById('about')
+      about: document.getElementById('about'),
+      experience: document.getElementById('experience')
     };
 
     function scrollToTarget(key) {
@@ -6426,6 +6525,13 @@
       });
     });
 
+    document.querySelectorAll('.js-santander-view-interface').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        scrollToSantanderSection('section-santander-interfaces');
+      });
+    });
+
     document.querySelectorAll('.js-santander-view-outcome').forEach(function (el) {
       el.addEventListener('click', function (e) {
         e.preventDefault();
@@ -6445,6 +6551,7 @@
       var navSections = [
         { id: 'section-santander-desafio', link: nav.querySelector('.js-santander-view-challenge') },
         { id: 'section-santander-metodologia', link: nav.querySelector('.js-santander-view-methodology') },
+        { id: 'section-santander-interfaces', link: nav.querySelector('.js-santander-view-interface') },
         { id: 'section-santander-resultado', link: nav.querySelector('.js-santander-view-outcome') }
       ];
       var allLinks = [overviewLink].concat(navSections.map(function (s) { return s.link; })).filter(Boolean);
@@ -6905,6 +7012,13 @@
       });
     });
 
+    document.querySelectorAll('.js-view-interface').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        scrollToOverviewSection('section-onr-interface');
+      });
+    });
+
     // "Resultado" nav items scroll to the actual Outcome/Resultado section.
     document.querySelectorAll('.js-view-outcome').forEach(function (el) {
       el.addEventListener('click', function (e) {
@@ -6933,6 +7047,7 @@
         { id: 'section-desafio', link: nav.querySelector('.js-view-challenge') },
         { id: 'section-metodologia', link: nav.querySelector('.js-view-methodology') },
         { id: 'section-wireframes', link: nav.querySelector('.js-view-validation') },
+        { id: 'section-onr-interface', link: nav.querySelector('.js-view-interface') },
         { id: 'section-onr-resultado', link: nav.querySelector('.js-view-outcome') }
       ];
       var allLinks = [overviewLink].concat(navSections.map(function (s) { return s.link; })).filter(Boolean);
@@ -6977,6 +7092,7 @@
     // no reload, no separate pages — just swaps the text content in place.
     var translations = {
       en: {
+        nav_experience: "Experience",
         exp_eyebrow: "Experience",
         exp_headline: "Career path:",
         exp_prev_label: "Before",
@@ -6985,7 +7101,7 @@
         exp_cta: "Download resume",
         exp0_role: "Senior Product Designer",
         exp0_date: "Jun 2024 – Sep 2026",
-        exp0_desc: "Modernization of B2B and B2C real estate registry systems. NPS +62 and 84% perceived ease of registration.",
+        exp0_desc: "Modernization of B2B and B2C real estate registry systems: Map, SIPE (payments) and asset search. On the Map, NPS +62 and 84% perceived ease of registration.",
         exp1_role: "Senior Product Designer",
         exp1_date: "Dec 2023 – Jun 2024",
         exp1_desc: "Discovery and design of the API Portal and Treasury area. 34% less time to reach key features.",
@@ -7015,7 +7131,7 @@
         sebrae_body_p3: "The Design System started as a need of my squad and came to be used by four squads, cutting interface creation time by 50% and development time by about 40%, with the metrics tracked in Jira.",
         sebrae_info_industry: "Small businesses \u00b7 Internal systems",
         sebrae_info_role: "Lead Product Designer \u00b7 UX, UI, component architecture and Design System",
-        sebrae_info_timeline: "1 year",
+        sebrae_info_timeline: "Design System · 2 months\nSebrae · Sep 2022 – Sep 2023",
         sebrae_info_methods: "Interface audit \u00b7 Foundations and tokens \u00b7 Component library",
         sebrae_info_result: "50% less creation time \u00b7 40% less development time \u00b7 4 squads",
         sebrae_challenge_title: "The challenge",
@@ -7132,8 +7248,8 @@
         personas_info_industry_value: "Legal Tech \u00b7 Real Estate Registry",
         personas_info_role_label: "My role",
         personas_info_role_value: "Senior Product Designer \u00b7 UX Research",
-        personas_info_timeline_label: "Timeline",
-        personas_info_timeline_value: "1 year",
+        personas_info_timeline_label: "Period",
+        personas_info_timeline_value: "Personas · 1 year, alongside other projects\nONR · Jun 2024 – Sep 2026",
         personas_info_product_label: "Product",
         personas_info_product_value: "Real estate registry services hub (RI Digital)",
         personas_info_methods_label: "Methods",
@@ -7233,7 +7349,7 @@
         personas_disc_r4_c3: "27% have already had a payment failure",
         personas_disc_r4_c4: "48% find costs unclear or not clear at all, 18% have a payment or credit failure",
         personas_disc_r4_c5: "Payment flow",
-        personas_disc_r5_c1: "Tracking and receipts",
+        personas_disc_r5_c1: "Updates and receipts",
         personas_disc_r5_c2: "69% miss a receipt, 59% get a superficial note, none, or just the protocol number",
         personas_disc_r5_c3: "78% find notifications insufficient, 73% want to identify the client in the protocol, 93% want the pre-notation in the list",
         personas_disc_r5_c4: "33% don\u2019t receive a notification, 30% find updates not detailed enough",
@@ -7604,8 +7720,8 @@
         santander_info_industry_value: "Financial Services \u00b7 BaaS \u00b7 APIs",
         santander_info_role_label: "My role",
         santander_info_role_value: "Specialist Product Designer \u00b7 Discovery, Research & Product Strategy",
-        santander_info_timeline_label: "Timeline",
-        santander_info_timeline_value: "7 months",
+        santander_info_timeline_label: "Period",
+        santander_info_timeline_value: "Dec 2023 – Jun 2024 · 7 months",
         santander_info_product_label: "Product",
         santander_info_product_value: "B2B portal for Santander\u2019s APIs and financial services",
         santander_info_methods_label: "Methods",
@@ -7733,8 +7849,8 @@
         porto_info_industry_value: "Insurance",
         porto_info_role_label: "My role",
         porto_info_role_value: "Senior Product Designer \u00b7 UX Research and leadership",
-        porto_info_timeline_label: "Timeline",
-        porto_info_timeline_value: "3 months",
+        porto_info_timeline_label: "Period",
+        porto_info_timeline_value: "Oct – Dec 2023 · 3 months",
         porto_info_product_label: "Product",
         porto_info_product_value: "Porto App \u00b7 SOS and Help area",
         porto_info_methods_label: "Methods",
@@ -7826,6 +7942,7 @@
         case_nav_challenge: "The challenge",
         case_nav_methodology: "Methodology",
         case_nav_validation: "Validation",
+        case_nav_interface: "Interface",
         case_nav_outcome: "Outcome",
         case_nav_coming_soon: "Coming soon",
         case_tag1: "Geospatial Data",
@@ -7842,8 +7959,8 @@
         ov_info_industry_value: "Legal Tech \u00b7 Geospatial Property Registry",
         ov_info_role_label: "My role",
         ov_info_role_value: "Senior Product Designer \u2014 end-to-end",
-        ov_info_timeline_label: "Timeline",
-        ov_info_timeline_value: "1.5 years",
+        ov_info_timeline_label: "Period",
+        ov_info_timeline_value: "Mapa · 1 year 6 months\nONR · Jun 2024 – Sep 2026",
         ov_info_product_label: "Product",
         ov_info_product_value: "National geospatial platform for property registration",
         ov_info_methods_label: "Methods",
@@ -8077,6 +8194,93 @@
         mapa_resultado_r6_c1: "Registration doubts",
         mapa_resultado_r6_c2: "−37%",
         mapa_resultado_r6_c3: "Fewer doubts during the process",
+        mapa_res_legend: "Results measured against the legacy Map.",
+        mapa_how_title: "How we measured",
+        mapa_how_intro: "Every result compares the new Map with the legacy Map, which served as the baseline.",
+        mapa_how_f1_l: "Baseline",
+        mapa_how_f1_v: "Service-desk complaints about the legacy Map, gathered during the year of research, benchmarking and design before the MVP",
+        mapa_how_f2_l: "Follow-up",
+        mapa_how_f2_v: "47 registry analysts followed for 3 months after launch",
+        mapa_how_f3_l: "Sources",
+        mapa_how_f3_v: "Behavior data, NPS and service-desk feedback",
+        mapa_how_f4_l: "NPS sample",
+        mapa_how_f4_v: "35 responses among the 47 analysts",
+        mapa_learn_title: "What I learned",
+        mapa_learn_1: "Putting different areas in the same conversation speeds up prioritization. In the workshop, directors, support and registry staff discussed the Map together for the first time, which unlocked a backlog of 8 opportunities.",
+        mapa_learn_2: "In a product governed by legal rulings, changing a flow is also a legal decision. Involving that area early, as with the step-by-step registration, makes the change safer.",
+        mapa_learn_3: "Changing a pattern the team already uses takes evidence. GIS benchmarks and user validation supported replacing the central card with a side panel.",
+        mapa_diff_title: "What I would do differently",
+        mapa_diff_1: "Measure the legacy Map with the same NPS and ease-of-use questions before launch. Today the baseline is service-desk complaints, which makes the comparison indirect.",
+        mapa_diff_2: "Broaden the usability tests. I validated with 6 professionals; a larger sample with more registry profiles would give more confidence in the MVP decisions.",
+        mapa_diff_3: "Bring the postponed features, such as drawing and measuring, to user testing earlier, so the next phase starts with evidence.",
+        porto_bl_title: "Opportunity backlog",
+        porto_bl_legend: "Opportunities prioritized in the workshop with the Porto team, organized along two axes: Prevention, with education, alert and containment actions; and Situation, with guidance, support and resolution actions. Each opportunity shows the related territory, the impact perceived by the team and its priority.",
+        san_rs_t1_n: "−34%",
+        san_rs_t1_c: "in time to locate and access an API",
+        san_rs_t2_n: "4",
+        san_rs_t2_c: "internal developers in the test, outside the product team",
+        san_rs_t3_n: "100%",
+        san_rs_t3_c: "understood the flow, with no critical doubts",
+        san_rs_ctx: "Research base: 8 profiles · 24 interviews · 3 fronts prioritized",
+        san_rs_how_intro: "We compared the time to complete the same task in the previous experience and in the new structure.",
+        san_rs_f1_v: "Previous experience vs. new structure, on the same task",
+        rs_f_task_l: "Task",
+        san_rs_f2_v: "Locate the correct company, identify an API and reach the management area",
+        rs_f_metric_l: "Metric",
+        san_rs_f3_v: "Time from the start of the task to the final action",
+        rs_f_part_l: "Participants",
+        san_rs_f4_v: "4 internal developers, outside the product team and with no prior knowledge of BaaS",
+        san_rs_l2: "Taking the research findings back to the stakeholders interviewed at the start connected the needs identified to roadmap decisions.",
+        san_rs_d1a: "If I’d had more time on the project, I would have brought forward testing of the main navigation hypotheses to confront the structure with users before development.",
+        san_rs_d1b: "The research gave a broad view of the ecosystem, but validating the critical flows while the solution was still being defined would have let me iterate on the architecture earlier and reduce uncertainties that only surfaced later, already in production.",
+        san_rs_d2: "Agree with the product team, before leaving the project, on how post-launch impact would be tracked, since it remained a hypothesis.",
+        porto_rs_t1_t: "solutions analyzed",
+        porto_rs_t2_t: "ideas generated in the workshop",
+        porto_rs_t3_t: "users in the quantitative survey",
+        porto_rs_n1: "15",
+        porto_rs_n2: "72",
+        porto_rs_n3: "~500",
+        porto_rs_c1_t: "Support and resolution gained ground",
+        porto_rs_c2_t: "Prioritized backlog",
+        porto_rs_l1: "Benchmarking only creates value when it helps turn references into decisions.",
+        porto_rs_l2: "Beyond mapping interesting solutions, it took building a structure to compare contexts, identify patterns and bring those learnings into a concrete product discussion.",
+        porto_rs_l3: "The workshop mattered precisely because it bridged research, business and prioritization.",
+        porto_rs_d1: "Involve the prioritization and success criteria for the quantitative research even earlier, making explicit from the start how each hypothesis would be evaluated.",
+        porto_rs_d2: "Connect benchmarking, ideation and validation into an even more direct line to the product decision.",
+        prs_rs_n1: "10",
+        prs_rs_t1: "profiles mapped",
+        prs_rs_n2: "3",
+        prs_rs_t2: "profiles in depth",
+        prs_rs_n3: "74",
+        prs_rs_deliv: "What I delivered",
+        prs_rs_c1_t: "Product decisions",
+        prs_rs_c1_b: "Tied to each profile and to the development order.",
+        prs_rs_c2_t: "ICPs and narratives",
+        prs_rs_c2_b: "Describe the context, the pains and how to communicate the product to each profile.",
+        prs_rs_c3_t: "Prioritization criterion",
+        prs_rs_c3_b: "Indicates where to start, instead of treating every profile the same way.",
+        prs_rs_l1: "A persona only creates value when it becomes a decision criterion.",
+        prs_rs_l2: "The interviews gave depth, the quantitative research gave scale to choose between hypotheses, and comparing the three profiles showed where needs repeat and where they call for different solutions.",
+        prs_rs_l3: "I started treating research as an input to prioritization, not only to discovery.",
+        prs_rs_d1: "Define from the start, together with the business team, how each hypothesis would be considered confirmed, partial or refuted, and which product decision each result would unlock. That would shorten the distance between research and decision.",
+        prs_rs_d2: "Bring tracking metrics into the backlog from the first cycle, to measure the effect of each decision once delivered.",
+        seb_rs_n1: "4",
+        seb_rs_t1: "squads using the same library",
+        seb_rs_n2: "50%",
+        seb_rs_t2: "less time creating interfaces",
+        seb_rs_n3: "~40%",
+        seb_rs_t3: "less time in development",
+        seb_rs_c1_t: "More consistency across systems",
+        seb_rs_c2_t: "Shared evolution",
+        seb_rs_how_intro: "Both time savings were measured by tracking deliveries in Jira.",
+        seb_rs_f1_l: "Source",
+        seb_rs_f1_v: "Jira: design and development deliveries",
+        seb_rs_f2_v: "Effort before and after the library was adopted",
+        seb_rs_l2: "With structured components, designers spend more time on experience and flow structure, and less on rebuilding elements.",
+        seb_rs_today_lead: "The system was created in 2022 and reflects the decisions and possibilities of that moment. Today, I would make a few adjustments:",
+        seb_rs_d1: "Set the body text line-height at around 1.5.",
+        seb_rs_d2: "Include a visible focus state on all interactive elements.",
+        seb_rs_d3: "Organize colors by function (such as text, border and surface) rather than only by color name.",
         design_system_title: "Design System",
         design_system_subtitle_line1: "Consistency",
         design_system_subtitle_line2: "to scale",
@@ -8149,6 +8353,7 @@
         outcome_caption_line2: "clarity, control and real-world workflows."
       },
       pt: {
+        nav_experience: "Experiência",
         exp_eyebrow: "Experiência",
         exp_headline: "Trajetória profissional:",
         exp_prev_label: "Antes",
@@ -8157,7 +8362,7 @@
         exp_cta: "Baixar currículo",
         exp0_role: "Senior Product Designer",
         exp0_date: "Jun 2024 – Set 2026",
-        exp0_desc: "Modernização de sistemas B2B e B2C do registro de imóveis. NPS +62 e 84% de facilidade percebida no cadastro.",
+        exp0_desc: "Modernização de sistemas B2B e B2C do registro de imóveis: Mapa, SIPE (pagamentos) e pesquisa de bens. No Mapa, NPS +62 e 84% de facilidade percebida no cadastro.",
         exp1_role: "Senior Product Designer",
         exp1_date: "Dez 2023 – Jun 2024",
         exp1_desc: "Discovery e design do Portal de APIs e da Tesouraria. 34% menos tempo de acesso às funcionalidades-chave.",
@@ -8187,7 +8392,7 @@
         sebrae_body_p3: "O Design System come\u00e7ou como uma necessidade da minha squad e passou a ser usado por quatro squads, reduzindo em 50% o tempo de cria\u00e7\u00e3o das interfaces e em cerca de 40% o tempo de desenvolvimento, com as m\u00e9tricas acompanhadas pelo Jira.",
         sebrae_info_industry: "Pequenos neg\u00f3cios \u00b7 Sistemas internos",
         sebrae_info_role: "Lead Product Designer \u00b7 UX, UI, arquitetura de componentes e Design System",
-        sebrae_info_timeline: "1 ano",
+        sebrae_info_timeline: "Design System · 2 meses\nSebrae · Set 2022 – Set 2023",
         sebrae_info_methods: "Auditoria de interfaces \u00b7 Fundamentos e tokens \u00b7 Biblioteca de componentes",
         sebrae_info_result: "50% menos tempo de cria\u00e7\u00e3o \u00b7 40% menos no desenvolvimento \u00b7 4 squads",
         sebrae_challenge_title: "O desafio",
@@ -8304,8 +8509,8 @@
         personas_info_industry_value: "Legal Tech \u00b7 Registro de Im\u00f3veis",
         personas_info_role_label: "Minha fun\u00e7\u00e3o",
         personas_info_role_value: "Product Designer S\u00eanior \u00b7 UX Research",
-        personas_info_timeline_label: "Dura\u00e7\u00e3o",
-        personas_info_timeline_value: "1 ano",
+        personas_info_timeline_label: "Período",
+        personas_info_timeline_value: "Personas · 1 ano, em paralelo a outros projetos\nONR · Jun 2024 – Set 2026",
         personas_info_product_label: "Produto",
         personas_info_product_value: "Hub de servi\u00e7os de registro de im\u00f3veis (RI Digital)",
         personas_info_methods_label: "M\u00e9todos",
@@ -8405,7 +8610,7 @@
         personas_disc_r4_c3: "27% j\u00e1 tiveram falha de pagamento",
         personas_disc_r4_c4: "48% acham os custos pouco ou nada claros, 18% t\u00eam falha de pagamento ou cr\u00e9dito",
         personas_disc_r4_c5: "Fluxo de pagamento",
-        personas_disc_r5_c1: "Acompanhamento e comprovantes",
+        personas_disc_r5_c1: "Atualizações e comprovantes",
         personas_disc_r5_c2: "69% sentem falta de recibo, 59% recebem nota superficial, ausente ou s\u00f3 o n\u00famero do protocolo",
         personas_disc_r5_c3: "78% acham as notifica\u00e7\u00f5es insuficientes, 73% querem identificar o cliente no protocolo, 93% querem a prenota\u00e7\u00e3o na lista",
         personas_disc_r5_c4: "33% n\u00e3o recebem notifica\u00e7\u00e3o, 30% acham as atualiza\u00e7\u00f5es pouco detalhadas",
@@ -8776,8 +8981,8 @@
         santander_info_industry_value: "Servi\u00e7os financeiros \u00b7 BaaS \u00b7 APIs",
         santander_info_role_label: "Minha fun\u00e7\u00e3o",
         santander_info_role_value: "Product Designer Especialista \u00b7 Discovery, Research e estrat\u00e9gia de produto",
-        santander_info_timeline_label: "Dura\u00e7\u00e3o",
-        santander_info_timeline_value: "7 meses",
+        santander_info_timeline_label: "Período",
+        santander_info_timeline_value: "Dez 2023 – Jun 2024 · 7 meses",
         santander_info_product_label: "Produto",
         santander_info_product_value: "Portal B2B para APIs e servi\u00e7os financeiros do Santander",
         santander_info_methods_label: "M\u00e9todos",
@@ -8905,8 +9110,8 @@
         porto_info_industry_value: "Seguros",
         porto_info_role_label: "Minha fun\u00e7\u00e3o",
         porto_info_role_value: "Product Designer S\u00eanior \u00b7 UX Research e lideran\u00e7a",
-        porto_info_timeline_label: "Dura\u00e7\u00e3o",
-        porto_info_timeline_value: "3 meses",
+        porto_info_timeline_label: "Período",
+        porto_info_timeline_value: "Out – Dez 2023 · 3 meses",
         porto_info_product_label: "Produto",
         porto_info_product_value: "Porto App \u00b7 \u00c1rea SOS e Ajuda",
         porto_info_methods_label: "M\u00e9todos",
@@ -9029,6 +9234,7 @@
         case_nav_challenge: "Desafio",
         case_nav_methodology: "Metodologia",
         case_nav_validation: "Validação",
+        case_nav_interface: "Interface",
         case_nav_outcome: "Resultado",
         case_nav_coming_soon: "Em breve",
         case_tag1: "Dados geoespaciais",
@@ -9045,8 +9251,8 @@
         ov_info_industry_value: "Legal Tech \u00b7 Registro de Imóveis",
         ov_info_role_label: "Minha função",
         ov_info_role_value: "Product Designer Sênior \u00b7 atuação em todo o ciclo do produto",
-        ov_info_timeline_label: "Duração",
-        ov_info_timeline_value: "1,5 anos",
+        ov_info_timeline_label: "Período",
+        ov_info_timeline_value: "Mapa · 1 ano e 6 meses\nONR · Jun 2024 – Set 2026",
         ov_info_product_label: "Produto",
         ov_info_product_value: "Plataforma geoespacial nacional para registro de imóveis",
         ov_info_methods_label: "Métodos",
@@ -9086,7 +9292,7 @@
         method_s1_title: "1. Imersão no produto",
         method_s1_body: "Mergulhei no Mapa e em sua experiência legada, navegando pelo produto ao lado de usuários experientes para entender seus fluxos de trabalho, funcionalidades e contexto operacional.",
         method_s2_title: "2. Insights de usuários",
-        method_s2_body: "Entrevistei diretores da ONR e profissionais de cartório para entender diferentes perspectivas, necessidades e desafios. Estruturei os achados em insights e oportunidades essenciais.",
+        method_s2_body: "Entrevistei diretores do ONR e profissionais de cartório para entender diferentes perspectivas, necessidades e desafios. Estruturei os achados em insights e oportunidades essenciais.",
         method_s3_title: "3. Dos achados às oportunidades",
         method_s3_body: "Sintetizei os achados da pesquisa entre os perfis de usuário, identificando dores recorrentes, necessidades e oportunidades para orientar a direção do produto.",
         insights_table_eyebrow: "ENTREVISTAS — SÍNTESE DE INSIGHTS",
@@ -9280,6 +9486,93 @@
         mapa_resultado_r6_c1: "Dúvidas no cadastro",
         mapa_resultado_r6_c2: "−37%",
         mapa_resultado_r6_c3: "Redução de dúvidas durante a execução do processo",
+        mapa_res_legend: "Resultados medidos em comparação com o Mapa legado.",
+        mapa_how_title: "Como medimos",
+        mapa_how_intro: "Todos os resultados comparam o novo Mapa com o Mapa legado, que serviu de base de referência.",
+        mapa_how_f1_l: "Base de comparação",
+        mapa_how_f1_v: "Reclamações do atendimento sobre o Mapa legado, levantadas ao longo do ano de pesquisa, benchmark e design antes do MVP",
+        mapa_how_f2_l: "Acompanhamento",
+        mapa_how_f2_v: "47 analistas de cartório acompanhados por 3 meses após o lançamento",
+        mapa_how_f3_l: "Fontes",
+        mapa_how_f3_v: "Dados de comportamento, NPS e feedbacks do atendimento",
+        mapa_how_f4_l: "Amostra do NPS",
+        mapa_how_f4_v: "35 respostas entre os 47 analistas",
+        mapa_learn_title: "O que aprendi",
+        mapa_learn_1: "Juntar áreas diferentes na mesma conversa acelera a priorização. No workshop, diretoria, atendimento e cartórios discutiram o Mapa juntos pela primeira vez, e isso destravou um backlog de 8 oportunidades.",
+        mapa_learn_2: "Em um produto regido por provimentos jurídicos, mudar um fluxo é também uma decisão jurídica. Envolver essa área cedo, como no cadastro em etapas, torna a mudança mais segura.",
+        mapa_learn_3: "Mudar um padrão que o time já usa exige evidência. Benchmarks de ferramentas GIS e a validação com usuários sustentaram a troca do card central pelo painel lateral.",
+        mapa_diff_title: "O que eu faria diferente",
+        mapa_diff_1: "Medir o Mapa legado com as mesmas perguntas de NPS e facilidade antes do lançamento. Hoje a base são as reclamações do atendimento, o que torna a comparação indireta.",
+        mapa_diff_2: "Ampliar os testes de usabilidade. Validei com 6 profissionais; uma amostra maior, com mais perfis de cartório, daria mais segurança às decisões do MVP.",
+        mapa_diff_3: "Levar mais cedo as funcionalidades adiadas, como desenho e medição, para teste com usuários, para que a próxima fase comece com evidência.",
+        porto_bl_title: "Backlog de oportunidades",
+        porto_bl_legend: "Oportunidades priorizadas no workshop com o time da Porto, organizadas em dois eixos: Prevenção, com ações de educação, alerta e contenção; e Situação, com ações de instrução, suporte e resolução. Cada oportunidade mostra o território relacionado, o impacto percebido pelo time e sua prioridade.",
+        san_rs_t1_n: "−34%",
+        san_rs_t1_c: "no tempo para localizar e acessar uma API",
+        san_rs_t2_n: "4",
+        san_rs_t2_c: "desenvolvedores internos no teste, fora da equipe do produto",
+        san_rs_t3_n: "100%",
+        san_rs_t3_c: "compreenderam o fluxo, sem dúvidas críticas",
+        san_rs_ctx: "Pesquisa de base: 8 perfis · 24 entrevistas · 3 frentes priorizadas",
+        san_rs_how_intro: "Comparamos o tempo para realizar a mesma tarefa na experiência anterior e na nova estrutura.",
+        san_rs_f1_v: "Experiência anterior × nova estrutura, na mesma tarefa",
+        rs_f_task_l: "Tarefa",
+        san_rs_f2_v: "Localizar a empresa correta, identificar uma API e chegar à área de gerenciamento",
+        rs_f_metric_l: "Métrica",
+        san_rs_f3_v: "Tempo do início da tarefa até a ação final",
+        rs_f_part_l: "Participantes",
+        san_rs_f4_v: "4 desenvolvedores internos, fora da equipe do produto e sem conhecimento prévio do BaaS",
+        san_rs_l2: "Levar os achados da pesquisa aos stakeholders entrevistados no início conectou as necessidades identificadas às decisões de roadmap.",
+        san_rs_d1a: "Se tivesse mais tempo no projeto, anteciparia os testes das principais hipóteses de navegação para confrontar a estrutura com usuários antes do desenvolvimento.",
+        san_rs_d1b: "A pesquisa trouxe uma visão ampla do ecossistema, mas testar os fluxos críticos ainda durante a definição da solução permitiria iterar sobre a arquitetura com mais antecedência e reduzir incertezas que só apareceriam depois, já em produção.",
+        san_rs_d2: "Combinar com o produto, antes de sair do projeto, como o impacto pós-lançamento seria acompanhado, já que ele ficou como hipótese.",
+        porto_rs_t1_t: "soluções analisadas",
+        porto_rs_t2_t: "ideias geradas no workshop",
+        porto_rs_t3_t: "usuários na pesquisa quantitativa",
+        porto_rs_n1: "15",
+        porto_rs_n2: "72",
+        porto_rs_n3: "~500",
+        porto_rs_c1_t: "Suporte e resolução ganharam espaço",
+        porto_rs_c2_t: "Backlog priorizado",
+        porto_rs_l1: "Benchmark só ganha valor quando ajuda a transformar referências em decisões.",
+        porto_rs_l2: "Mais do que mapear soluções interessantes, foi preciso criar uma estrutura para comparar contextos, identificar padrões e levar esses aprendizados para uma discussão concreta de produto.",
+        porto_rs_l3: "O workshop foi importante justamente por fazer essa ponte entre pesquisa, negócio e priorização.",
+        porto_rs_d1: "Envolver ainda mais cedo os critérios de priorização e sucesso da pesquisa quantitativa, deixando explícito desde o início como cada hipótese seria avaliada.",
+        porto_rs_d2: "Conectar benchmark, ideação e validação em uma linha ainda mais direta até a decisão de produto.",
+        prs_rs_n1: "10",
+        prs_rs_t1: "perfis mapeados",
+        prs_rs_n2: "3",
+        prs_rs_t2: "perfis aprofundados",
+        prs_rs_n3: "74",
+        prs_rs_deliv: "O que entreguei",
+        prs_rs_c1_t: "Decisões de produto",
+        prs_rs_c1_b: "Conectadas a cada perfil e à ordem de desenvolvimento.",
+        prs_rs_c2_t: "ICPs e narrativas",
+        prs_rs_c2_b: "Descrevem o contexto, as dores e a forma de comunicar o produto para cada perfil.",
+        prs_rs_c3_t: "Critério de priorização",
+        prs_rs_c3_b: "Indica por onde começar, em vez de tratar todos os perfis da mesma forma.",
+        prs_rs_l1: "Persona só gera valor quando vira critério de decisão.",
+        prs_rs_l2: "As entrevistas deram profundidade, a pesquisa quantitativa deu escala para escolher entre hipóteses, e a comparação entre os três perfis mostrou onde as necessidades se repetem e onde pedem soluções diferentes.",
+        prs_rs_l3: "Passei a tratar a pesquisa como insumo de priorização, e não só de descoberta.",
+        prs_rs_d1: "Definir desde o início, junto com o time de negócio, como cada hipótese seria considerada confirmada, parcial ou refutada, e qual decisão de produto cada resultado destravaria. Isso reduziria a distância entre a pesquisa e a decisão.",
+        prs_rs_d2: "Levar métricas de acompanhamento para o backlog desde o primeiro ciclo, para medir o efeito de cada decisão depois de entregue.",
+        seb_rs_n1: "4",
+        seb_rs_t1: "squads usando a mesma biblioteca",
+        seb_rs_n2: "50%",
+        seb_rs_t2: "menos tempo na criação das interfaces",
+        seb_rs_n3: "~40%",
+        seb_rs_t3: "menos tempo no desenvolvimento",
+        seb_rs_c1_t: "Mais consistência entre os sistemas",
+        seb_rs_c2_t: "Evolução compartilhada",
+        seb_rs_how_intro: "Os dois ganhos de tempo foram medidos a partir do acompanhamento das entregas no Jira.",
+        seb_rs_f1_l: "Fonte",
+        seb_rs_f1_v: "Jira: entregas de design e desenvolvimento",
+        seb_rs_f2_v: "Esforço antes e depois da adoção da biblioteca",
+        seb_rs_l2: "Com componentes estruturados, os designers passam a dedicar mais tempo à experiência e à estrutura dos fluxos, e menos à reconstrução de elementos.",
+        seb_rs_today_lead: "O sistema foi criado em 2022 e reflete as decisões e possibilidades daquele momento. Hoje, faria alguns ajustes:",
+        seb_rs_d1: "Definir o line-height do texto corrido em torno de 1,5.",
+        seb_rs_d2: "Incluir um estado de foco visível em todos os elementos interativos.",
+        seb_rs_d3: "Organizar as cores por função (como texto, borda e superfície) em vez de apenas por nome de cor.",
         design_system_title: "Design System",
         design_system_subtitle_line1: "Consistência",
         design_system_subtitle_line2: "para escalar",
@@ -9423,7 +9716,7 @@
 </html>
 
 <script>(function(){try{if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;var s=document.querySelector('#view-home .about'),g=document.querySelector('#view-home .about-graphic');if(!s||!g)return;s.addEventListener('mousemove',function(e){var r=s.getBoundingClientRect(),dx=(e.clientX-r.left)/r.width-.5,dy=(e.clientY-r.top)/r.height-.5;g.style.setProperty('--gx',(dx*28).toFixed(1)+'px');g.style.setProperty('--gy',(dy*20).toFixed(1)+'px')});s.addEventListener('mouseleave',function(){g.style.setProperty('--gx','0px');g.style.setProperty('--gy','0px')})}catch(_){}})();</script><script>(function(){
-var CFG={"view-santander": ["section-santander-desafio", "section-santander-metodologia", "section-santander-resultado"], "view-porto": ["section-porto-desafio", "section-porto-metodologia", "section-porto-resultado"], "view-personas": ["section-personas-desafio", "section-personas-metodologia", "section-personas-resultado"], "view-onr-mapa": ["section-desafio", "section-metodologia", "section-wireframes", "section-onr-resultado"], "view-sebrae": ["section-sebrae-desafio", "section-sebrae-metodologia", "section-sebrae-ds", "section-sebrae-resultado"]};var OFF=140;
+var CFG={"view-santander": ["section-santander-desafio", "section-santander-metodologia", "section-santander-interfaces", "section-santander-resultado"], "view-porto": ["section-porto-desafio", "section-porto-metodologia", "section-porto-resultado"], "view-personas": ["section-personas-desafio", "section-personas-metodologia", "section-personas-resultado"], "view-onr-mapa": ["section-desafio", "section-metodologia", "section-wireframes", "section-onr-interface", "section-onr-resultado"], "view-sebrae": ["section-sebrae-desafio", "section-sebrae-metodologia", "section-sebrae-ds", "section-sebrae-resultado"]};var OFF=140;
 function links(nav){return Array.prototype.filter.call(nav.querySelectorAll('nav > a'),function(a){return !a.classList.contains('connect-link')&&!a.classList.contains('cv-link')})}
 var navs=[];document.querySelectorAll('.case-nav').forEach(function(n){var v=n.closest('[id^="view-"]');if(!v||!CFG[v.id])return;var t=document.createElement('div');t.className='case-track';t.innerHTML='<i></i>';n.appendChild(t);navs.push({n:n,v:v,t:t,f:t.firstChild,ids:CFG[v.id]})});
 var raf=false;
@@ -9440,4 +9733,23 @@ if(visible){var xs=ls.map(function(a){return a.getBoundingClientRect().left-nr.l
 else{left=0;width=nr.width;x=(seg+fr)/N*width}
 o.t.style.left=left+'px';o.t.style.width=width+'px';o.f.style.width=Math.min(width,x)+'px'})}
 window.addEventListener('scroll',function(){if(!raf){raf=true;requestAnimationFrame(upd)}},{passive:true});window.addEventListener('resize',upd);
-document.addEventListener('click',function(){setTimeout(upd,60)});upd()})();</script></body></html>
+document.addEventListener('click',function(){setTimeout(upd,60)});upd()})();</script><script>(function(){
+var h=document.querySelector('#view-home > header');if(!h)return;
+var ids=['home','work','experience'];
+var t=document.createElement('div');t.className='case-track';t.innerHTML='<i></i>';h.appendChild(t);var f=t.firstChild;
+function links(){return Array.prototype.filter.call(h.querySelectorAll('nav > a.js-scroll'),function(a){return ids.indexOf(a.getAttribute('data-target'))>-1})}
+var raf=false;
+function upd(){raf=false;var home=document.getElementById('view-home');if(!home||home.style.display==='none')return;
+var y=window.scrollY||document.documentElement.scrollTop;h.classList.toggle('is-scrolled',y>8);
+var ls=links(),N=ids.length,hr=h.getBoundingClientRect(),OFF=260,yr=y+OFF,tops=[];
+ids.forEach(function(id,i){var el=document.getElementById(id);tops.push(i===0?0:(el?el.getBoundingClientRect().top+y:tops[i-1]))});
+tops.push(Math.max(tops[N-1]+1,document.documentElement.scrollHeight-window.innerHeight+OFF));
+var seg=0;for(var i=0;i<N;i++){if(yr>=tops[i])seg=i}
+var span=Math.max(1,tops[seg+1]-tops[seg]),fr=Math.min(1,Math.max(0,(yr-tops[seg])/span));
+ls.forEach(function(a,i){a.classList.toggle('active',i===seg)});
+var visible=ls.length===N&&ls[0].offsetWidth>0&&!window.matchMedia('(max-width:680px)').matches;var left,width,x;
+if(visible){var xs=ls.map(function(a){return a.getBoundingClientRect().left-hr.left});var re=ls[N-1].getBoundingClientRect().right-hr.left;left=xs[0];width=re-xs[0];xs.push(re);var sl=xs[seg]-left,sr=xs[seg+1]-(seg+1<N?4:0)-left;x=sl+fr*Math.max(0,sr-sl)}
+else{left=0;width=hr.width;x=(seg+fr)/N*width}
+t.style.left=left+'px';t.style.width=width+'px';f.style.width=Math.min(width,x)+'px'}
+window.addEventListener('scroll',function(){if(!raf){raf=true;requestAnimationFrame(upd)}},{passive:true});window.addEventListener('resize',upd);
+document.addEventListener('click',function(){setTimeout(upd,60);setTimeout(upd,700)});upd()})();</script></body></html>
