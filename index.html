@@ -92,6 +92,16 @@
   .standard-list.personas-patterns li { list-style: decimal !important; margin-bottom: 12px; padding-left: 4px; }
   .standard-list.personas-patterns li::before { content: none !important; display: none !important; }
   .standard-list.personas-patterns li::marker { font-weight: 700; }
+
+  /* Mapa "Como medimos": 2-column table (same look as the Santander table) */
+  .dtable-wrap.dtable-wrap--how2 { width: 100%; max-width: 100%; margin: 20px 0 0 0; }
+  .dtable-wrap--how2 .dtable { grid-template-columns: 220px 1fr; }
+  .dtable-wrap--how2 .dtable > .dtable-cell:nth-child(2n+1) { padding-left: 24px !important; border-left: none !important; }
+  .dtable-wrap--how2 .dtable > .dtable-cell:nth-child(2n) { border-left: 1px solid rgba(26,26,23,0.15) !important; padding-left: 24px !important; padding-right: 24px; }
+  .dtable-wrap--how2 .dtable > .dtable-cell:nth-child(-n+2) { border-top: 3px solid #9D86F2; }
+  .dtable-wrap--how2 .dtable > .dtable-cell:nth-child(2) { border-top-color: #7BA3F0; }
+  .dtable-wrap--how2 .dtable > .dtable-cell:nth-last-child(-n+2) { border-bottom: none; }
+  @media (max-width: 768px) { .dtable-wrap--how2 .dtable { grid-template-columns: 152px minmax(0,1fr) !important; width: 100% !important; min-width: 0 !important; } .dtable-wrap--how2 .dtable > .dtable-cell, .dtable-wrap--how2 .dtable > .dtable-cell.dtable-label { padding-left: 16px !important; padding-right: 12px !important; } .dtable-wrap--how2 .dtable > .dtable-cell.dtable-label { font-size: 14px; } }
 </style></head><body>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -4988,11 +4998,19 @@ ONR · Jun 2024 – Set 2026</p>
     <div class="rs-how">
       <p class="rs-how-title" data-i18n="mapa_how_title">Como medimos</p>
       <p class="rs-how-intro" data-i18n="mapa_how_intro">A redução de dúvidas compara o novo Mapa com o Mapa legado. Os demais indicadores vêm da pesquisa com os analistas após o lançamento.</p>
-      <div class="rs-facts">
-        <div class="rs-fact"><span class="rs-fact-l" data-i18n="mapa_how_f1_l">Base de comparação</span><span class="rs-fact-v" data-i18n="mapa_how_f1_v">Reclamações do atendimento sobre o Mapa legado, registradas no período de pesquisa e design antes do MVP</span></div>
-        <div class="rs-fact"><span class="rs-fact-l" data-i18n="mapa_how_f2_l">Acompanhamento</span><span class="rs-fact-v" data-i18n="mapa_how_f2_v">47 analistas de cartório acompanhados por 3 meses após o lançamento</span></div>
-        <div class="rs-fact"><span class="rs-fact-l" data-i18n="mapa_how_f3_l">Fontes</span><span class="rs-fact-v" data-i18n="mapa_how_f3_v">Pesquisa com os analistas (NPS e perguntas de facilidade), feedbacks do atendimento e eventos de tracking que defini no MVP, incluindo o tempo por etapa do cadastro</span></div>
-        <div class="rs-fact"><span class="rs-fact-l" data-i18n="mapa_how_f4_l">Amostra do NPS</span><span class="rs-fact-v" data-i18n="mapa_how_f4_v">35 respostas entre os 47 analistas</span></div>
+      <div class="dtable-wrap dtable-wrap--how2">
+        <div class="dtable-scroll">
+        <div class="dtable">
+          <div class="dtable-cell dtable-label" data-i18n="mapa_how_f1_l">Base de comparação</div>
+          <div class="dtable-cell" data-i18n="mapa_how_f1_v">Reclamações do atendimento sobre o Mapa legado, registradas no período de pesquisa e design antes do MVP</div>
+          <div class="dtable-cell dtable-label" data-i18n="mapa_how_f2_l">Acompanhamento</div>
+          <div class="dtable-cell" data-i18n="mapa_how_f2_v">47 analistas de cartório acompanhados por 3 meses após o lançamento</div>
+          <div class="dtable-cell dtable-label" data-i18n="mapa_how_f4_l">Amostra do NPS</div>
+          <div class="dtable-cell" data-i18n="mapa_how_f4_v">35 respostas entre os 47 analistas</div>
+          <div class="dtable-cell dtable-label" data-i18n="mapa_how_f3_l">Fontes</div>
+          <div class="dtable-cell" data-i18n="mapa_how_f3_v">Pesquisa com os analistas (NPS e perguntas de facilidade), feedbacks do atendimento e eventos de tracking que defini no MVP, incluindo o tempo por etapa do cadastro</div>
+        </div>
+        </div>
       </div>
     </div>
 
@@ -5609,7 +5627,16 @@ ONR · Jun 2024 – Set 2026</p>
 
     <div class="rs-wide rs-stats rs-stats--3"><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="seb_rs_n1">4</span></span><p class="rs-tile-t"><span data-i18n="seb_rs_t1">squads usando a mesma biblioteca</span></p><p class="rs-tile-b"><span data-i18n="sebrae_li1_p"> O trabalho começou na minha squad, com UX e cinco desenvolvedores entre front-end e back-end, e depois foi adotado por outras três squads, cada uma formada por UX, desenvolvedores, Tech Lead e Product Owner.</span></p></div><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="seb_rs_n2">50%</span></span><p class="rs-tile-t"><span data-i18n="seb_rs_t2">menos tempo na criação das interfaces</span></p><p class="rs-tile-b"><span data-i18n="sebrae_li2_p"> Com os componentes já estruturados, os times deixaram de reconstruir elementos recorrentes ou criar novas soluções para cada funcionalidade.</span></p></div><div class="rs-tile"><span class="rs-tile-n"><span data-i18n="seb_rs_n3">~40%</span></span><p class="rs-tile-t"><span data-i18n="seb_rs_t3">menos tempo no desenvolvimento</span></p><p class="rs-tile-b"><span data-i18n="sebrae_li3_p"> Os componentes já implementados puderam ser reutilizados nos produtos, evitando que a interface precisasse ser desenvolvida novamente a cada demanda.</span></p></div></div>
     <div class="rs-wide rs-cols"><div class="rs-card rs-card--text"><p class="rs-card-title" data-i18n="seb_rs_c1_t">Mais consistência entre os sistemas</p><p class="rs-card-p" data-i18n="sebrae_li4_p"> Uma mesma linguagem visual e estrutural reduziu diferenças desnecessárias entre produtos e fluxos.</p></div><div class="rs-card rs-card--text"><p class="rs-card-title" data-i18n="seb_rs_c2_t">Evolução compartilhada</p><p class="rs-card-p" data-i18n="sebrae_li5_p"> Quando um componente precisava ser atualizado, a melhoria era incorporada à biblioteca e podia ser usada pelas demais squads. Com isso, os designers também puderam dedicar mais tempo à experiência e à estrutura dos fluxos.</p></div></div>
-    <div class="rs-wide rs-how"><p class="rs-how-title" data-i18n="mapa_how_title">Como medimos</p><p class="rs-how-intro"><span data-i18n="seb_rs_how_intro">Os dois ganhos de tempo foram medidos a partir do acompanhamento das entregas no Jira.</span></p><div class="rs-facts"><div class="rs-fact"><span class="rs-fact-l" data-i18n="seb_rs_f1_l">Fonte</span><span class="rs-fact-v" data-i18n="seb_rs_f1_v">Jira: entregas de design e desenvolvimento</span></div><div class="rs-fact"><span class="rs-fact-l" data-i18n="mapa_how_f1_l">Base de comparação</span><span class="rs-fact-v" data-i18n="seb_rs_f2_v">Esforço antes e depois da adoção da biblioteca</span></div></div></div>
+    <div class="rs-wide rs-how"><p class="rs-how-title" data-i18n="mapa_how_title">Como medimos</p><p class="rs-how-intro"><span data-i18n="seb_rs_how_intro">Os dois ganhos de tempo foram medidos a partir do acompanhamento das entregas no Jira.</span></p><div class="dtable-wrap dtable-wrap--how2">
+        <div class="dtable-scroll">
+        <div class="dtable">
+          <div class="dtable-cell dtable-label" data-i18n="seb_rs_f1_l">Fonte</div>
+          <div class="dtable-cell" data-i18n="seb_rs_f1_v">Jira: entregas de design e desenvolvimento</div>
+          <div class="dtable-cell dtable-label" data-i18n="mapa_how_f1_l">Base de comparação</div>
+          <div class="dtable-cell" data-i18n="seb_rs_f2_v">Esforço antes e depois da adoção da biblioteca</div>
+        </div>
+        </div>
+      </div></div>
     <div class="rs-wide rs-cols"><div class="rs-card"><p class="rs-card-title" data-i18n="mapa_learn_title">O que aprendi</p><ul><li><span data-i18n="sebrae_closing">Mais do que uma biblioteca de componentes, o Design System se tornou uma base compartilhada para a evolução dos produtos internos do Sebrae.</span></li><li><span data-i18n="seb_rs_l2">Com componentes estruturados, os designers passam a dedicar mais tempo à experiência e à estrutura dos fluxos, e menos à reconstrução de elementos.</span></li></ul></div><div class="rs-card"><p class="rs-card-title" data-i18n="sebrae_today_t">O que eu faria hoje</p><p class="rs-card-lead"><span data-i18n="seb_rs_today_lead">O sistema foi criado em 2022 e reflete as decisões e possibilidades daquele momento. Hoje, faria alguns ajustes:</span></p><ul><li><span data-i18n="seb_rs_d1">Definir o line-height do texto corrido em torno de 1,5.</span></li><li><span data-i18n="seb_rs_d2">Incluir um estado de foco visível em todos os elementos interativos.</span></li><li><span data-i18n="seb_rs_d3">Organizar as cores por função (como texto, borda e superfície) em vez de apenas por nome de cor.</span></li></ul></div></div>
 
 </div>
